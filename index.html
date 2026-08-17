@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHD English Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">PHD</div>
+          <div>
+            <div class="brand-title">English Studio</div>
+            <div class="brand-subtitle">Obsidian synced learning home</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a class="nav-item active" href="#home">Home</a>
+          <a class="nav-item" href="#english">English</a>
+          <a class="nav-item" href="#inbox">Inbox</a>
+          <a class="nav-item" href="#speaking">Speaking</a>
+          <a class="nav-item" href="#anki">Anki</a>
+        </nav>
+
+        <section class="side-card">
+          <div class="side-label">Sync status</div>
+          <div class="sync-state"><span></span> Watching Obsidian vault</div>
+          <div class="muted">Startup scan + lightweight file watcher</div>
+          <div class="mini-stats">
+            <div><strong>12</strong><span>notes</span></div>
+            <div><strong>4</strong><span>topics</span></div>
+            <div><strong>27</strong><span>cards</span></div>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-label">Today</div>
+          <div class="task">1 article to read</div>
+          <div class="task">1 speaking session</div>
+          <div class="task">6 Anki reviews</div>
+        </section>
+      </aside>
+
+      <main class="content" id="home">
+        <section class="hero">
+          <img src="./assets/hero-home.png" alt="PHD English Studio cover" />
+          <div class="hero-copy">
+            <p class="eyebrow">Personal learning feed</p>
+            <h1>PHD English Studio</h1>
+            <p class="lede">
+              Clip articles, generate reading notes, practice speaking, and keep
+              everything synced back to Obsidian.
+            </p>
+            <div class="hero-actions">
+              <button class="button primary">Add material</button>
+              <button class="button secondary">Start speaking</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="strip">
+          <div class="chip active">All</div>
+          <div class="chip">Inbox</div>
+          <div class="chip">Reading</div>
+          <div class="chip">Speaking</div>
+          <div class="chip">Vocabulary</div>
+          <div class="chip">Anki</div>
+          <div class="chip">Audio</div>
+        </section>
+
+        <section class="grid">
+          <article class="card feature">
+            <img src="./assets/cloud-ai.png" alt="Cloud AI article cover" />
+            <div class="card-body">
+              <div class="meta">
+                <span class="pill gold">A 精读</span>
+                <span class="pill">TechRadar</span>
+              </div>
+              <h2>Cloud & AI Infra</h2>
+              <p>Cloud spending, hyperscalers, pricing pressure, and AI investment.</p>
+              <div class="card-footer">
+                <span>12 vocab</span>
+                <span>5 sentences</span>
+                <span>1 speaking set</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card feature">
+            <img src="./assets/speaking.png" alt="Speaking practice cover" />
+            <div class="card-body">
+              <div class="meta">
+                <span class="pill pink">Speaking</span>
+                <span class="pill">Coach Prompt</span>
+              </div>
+              <h2>Live English Coach</h2>
+              <p>Topic-led conversation practice with short corrections and review.</p>
+              <div class="card-footer">
+                <span>3 sessions</span>
+                <span>2 reviews</span>
+                <span>Daily use</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card feature">
+            <img src="./assets/audio.png" alt="Audio library cover" />
+            <div class="card-body">
+              <div class="meta">
+                <span class="pill green">Audio</span>
+                <span class="pill">Shadowing</span>
+              </div>
+              <h2>Audio Library</h2>
+              <p>American English narration generated from clipped articles.</p>
+              <div class="card-footer">
+                <span>4 tracks</span>
+                <span>3 min avg</span>
+                <span>Listening loop</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="section" id="english">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">English Hub</p>
+              <h3>Active threads</h3>
+            </div>
+            <a class="link" href="#inbox">View inbox</a>
+          </div>
+          <div class="thread-rail">
+            <div class="thread">
+              <span>AI infrastructure spending</span>
+              <strong>TechRadar</strong>
+            </div>
+            <div class="thread">
+              <span>Cloud pricing strategy</span>
+              <strong>Investopedia</strong>
+            </div>
+            <div class="thread">
+              <span>Speaking prompts</span>
+              <strong>Live coach</strong>
+            </div>
+            <div class="thread">
+              <span>Sentence patterns</span>
+              <strong>IELTS reuse</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="inbox">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Inbox</p>
+              <h3>Materials ready to process</h3>
+            </div>
+            <button class="button tiny">Import clipping</button>
+          </div>
+          <div class="feed" id="feed"></div>
+        </section>
+
+        <section class="section two-col" id="speaking">
+          <div class="panel">
+            <p class="eyebrow">Speaking</p>
+            <h3>Conversation seeds</h3>
+            <div class="seed-list">
+              <div class="seed">
+                <strong>Should cloud services get cheaper as AI expands?</strong>
+                <span>Based on the TechRadar + Alibaba cloud thread</span>
+              </div>
+              <div class="seed">
+                <strong>When does price competition help consumers?</strong>
+                <span>Good for Part 3 opinion and trade-off answers</span>
+              </div>
+              <div class="seed">
+                <strong>How does infrastructure shape technology adoption?</strong>
+                <span>Useful for Task 2 and long-form answers</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="anki">
+            <p class="eyebrow">Anki</p>
+            <h3>Export queue</h3>
+            <div class="anki-list">
+              <div class="anki-row"><span>ramp up investment</span><em>ready</em></div>
+              <div class="anki-row"><span>slash prices</span><em>ready</em></div>
+              <div class="anki-row"><span>in an AI push</span><em>ready</em></div>
+              <div class="anki-row"><span>landmark high</span><em>ready</em></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal hidden" id="detailModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <article class="modal-sheet">
+        <button class="close" data-close aria-label="Close">×</button>
+        <div class="modal-hero">
+          <img id="detailImage" src="" alt="" />
+          <div>
+            <div class="meta" id="detailMeta"></div>
+            <h2 id="detailTitle"></h2>
+            <p id="detailSummary"></p>
+          </div>
+        </div>
+        <div class="modal-grid">
+          <div class="detail-block">
+            <h4>全文级中英对照</h4>
+            <div id="detailBilingual" class="text-block"></div>
+          </div>
+          <div class="detail-block">
+            <h4>Vocabulary</h4>
+            <div id="detailVocab" class="pill-stack"></div>
+          </div>
+          <div class="detail-block">
+            <h4>Long sentences</h4>
+            <div id="detailSentences" class="sentence-list"></div>
+          </div>
+          <div class="detail-block">
+            <h4>Speaking prompts</h4>
+            <div id="detailPrompts" class="sentence-list"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
