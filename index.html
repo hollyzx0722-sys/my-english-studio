@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHD English Studio</title>
+    <title>Deep Reading Lab · My English Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,65 +13,62 @@
     <div class="shell">
       <aside class="sidebar">
         <div class="brand">
-          <div class="brand-mark">PHD</div>
+          <div class="brand-mark">MY</div>
           <div>
-            <div class="brand-title">English Studio</div>
+            <div class="brand-title">My English Studio</div>
             <div class="brand-subtitle">Obsidian synced learning home</div>
           </div>
         </div>
 
-        <nav class="nav">
-          <a class="nav-item active" href="#home">Home</a>
-          <a class="nav-item" href="#english">English</a>
-          <a class="nav-item" href="#inbox">Inbox</a>
-          <a class="nav-item" href="#speaking">Speaking</a>
-          <a class="nav-item" href="#anki">Anki</a>
+        <nav class="nav" aria-label="Learning workspace">
+          <div class="nav-label">Workspace</div>
+          <a class="nav-item active" href="#overview" data-nav="overview"><span class="nav-index">01</span><span><strong>Overview</strong><small>今日学习</small></span></a>
+          <a class="nav-item" href="#english" data-nav="reading"><span class="nav-index">02</span><span><strong>Deep Reading</strong><small>精读文章</small></span></a>
+          <a class="nav-item" href="#vocabulary" data-nav="vocabulary"><span class="nav-index">03</span><span><strong>Vocabulary</strong><small>词汇系统</small></span></a>
+          <a class="nav-item" href="#speaking" data-nav="speaking"><span class="nav-index">04</span><span><strong>Speaking</strong><small>口语陪练</small></span></a>
         </nav>
 
         <section class="side-card">
           <div class="side-label">Sync status</div>
-          <div class="sync-state"><span></span> Watching Obsidian vault</div>
-          <div class="muted">Startup scan + lightweight file watcher</div>
+          <div class="sync-state" id="syncState"><span></span> Connecting to Obsidian vault</div>
+          <div class="muted" id="syncDetail">Startup scan + lightweight file watcher</div>
           <div class="mini-stats">
-            <div><strong>12</strong><span>notes</span></div>
-            <div><strong>4</strong><span>topics</span></div>
-            <div><strong>27</strong><span>cards</span></div>
+            <div><strong id="notesCount">0</strong><span>notes</span></div>
+            <div><strong id="topicsCount">0</strong><span>topics</span></div>
+            <div><strong id="sentencesCount">0</strong><span>sentences</span></div>
           </div>
         </section>
 
         <section class="side-card">
           <div class="side-label">Today</div>
-          <div class="task">1 article to read</div>
-          <div class="task">1 speaking session</div>
-          <div class="task">6 Anki reviews</div>
+          <div class="task"><span id="readingTodo">0</span> articles to read</div>
+          <div class="task"><span id="speakingDone">0</span> speaking sessions</div>
+          <div class="task"><span id="expressionCount">0</span> expressions to revisit</div>
         </section>
       </aside>
 
       <main class="content" id="home">
-        <section class="hero">
-          <img src="./assets/hero-home.png" alt="PHD English Studio cover" />
+        <section class="hero" id="overview" data-page-section="overview">
+          <img src="./assets/hero-home.png" alt="My English Studio cover" />
           <div class="hero-copy">
             <p class="eyebrow">Personal learning feed</p>
-            <h1>PHD English Studio</h1>
+            <h1>Deep Reading Lab</h1>
             <p class="lede">
-              Clip articles, generate reading notes, practice speaking, and keep
-              everything synced back to Obsidian.
+              Turn every article into a clear reading thread, useful language, and a speaking conversation.
             </p>
             <div class="hero-actions">
-              <button class="button primary">Add material</button>
-              <button class="button secondary">Start speaking</button>
+              <button class="button primary" data-open-import>Add material</button>
+              <button class="button secondary" data-scroll="speaking">Start speaking</button>
             </div>
           </div>
         </section>
 
         <section class="strip">
-          <div class="chip active">All</div>
-          <div class="chip">Inbox</div>
-          <div class="chip">Reading</div>
-          <div class="chip">Speaking</div>
-          <div class="chip">Vocabulary</div>
-          <div class="chip">Anki</div>
-          <div class="chip">Audio</div>
+          <button class="chip active" data-filter="All">All</button>
+          <button class="chip" data-filter="Inbox">Inbox</button>
+          <button class="chip" data-filter="Reading">Reading</button>
+          <button class="chip" data-filter="Vocabulary">Vocabulary</button>
+          <button class="chip" data-filter="Speaking">Speaking</button>
         </section>
 
         <section class="grid">
@@ -82,7 +79,7 @@
                 <span class="pill gold">A 精读</span>
                 <span class="pill">TechRadar</span>
               </div>
-              <h2>Cloud & AI Infra</h2>
+              <h2>Deep Reading: Cloud & AI</h2>
               <p>Cloud spending, hyperscalers, pricing pressure, and AI investment.</p>
               <div class="card-footer">
                 <span>12 vocab</span>
@@ -109,29 +106,13 @@
             </div>
           </article>
 
-          <article class="card feature">
-            <img src="./assets/audio.png" alt="Audio library cover" />
-            <div class="card-body">
-              <div class="meta">
-                <span class="pill green">Audio</span>
-                <span class="pill">Shadowing</span>
-              </div>
-              <h2>Audio Library</h2>
-              <p>American English narration generated from clipped articles.</p>
-              <div class="card-footer">
-                <span>4 tracks</span>
-                <span>3 min avg</span>
-                <span>Listening loop</span>
-              </div>
-            </div>
-          </article>
         </section>
 
-        <section class="section" id="english">
+        <section class="section" id="english" data-page-section="reading">
           <div class="section-head">
             <div>
-              <p class="eyebrow">English Hub</p>
-              <h3>Active threads</h3>
+            <p class="eyebrow">Reading Lab</p>
+              <h3>精读主线</h3>
             </div>
             <a class="link" href="#inbox">View inbox</a>
           </div>
@@ -155,18 +136,38 @@
           </div>
         </section>
 
-        <section class="section" id="inbox">
+        <section class="section" id="inbox" data-page-section="reading">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Inbox</p>
-              <h3>Materials ready to process</h3>
+              <p class="eyebrow" id="feedEyebrow">All materials</p>
+              <h3 id="feedTitle">全部精读材料</h3>
+              <p class="filter-summary" id="feedSummary" aria-live="polite"></p>
             </div>
-            <button class="button tiny">Import clipping</button>
+            <button class="button tiny" data-open-import>Import clipping</button>
           </div>
           <div class="feed" id="feed"></div>
         </section>
 
-        <section class="section two-col" id="speaking">
+        <section class="section vocabulary-workspace" id="vocabulary" data-page-section="vocabulary">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Vocabulary system</p>
+              <h3>词汇整理</h3>
+            </div>
+            <span class="muted">来自精读 · 口语练习后更新</span>
+          </div>
+          <div class="vocab-filters">
+            <button class="chip active" data-vocab-filter="all">全部</button>
+            <button class="chip" data-vocab-filter="speaking">口语</button>
+            <button class="chip" data-vocab-filter="writing">写作</button>
+            <button class="chip" data-vocab-filter="四六级">四六级</button>
+            <button class="chip" data-vocab-filter="专四专八">专四专八</button>
+            <button class="chip" data-vocab-filter="雅思高频">雅思高频</button>
+          </div>
+          <div id="vocabContent" class="vocab-content"></div>
+        </section>
+
+        <section class="section" id="speaking" data-page-section="speaking">
           <div class="panel">
             <p class="eyebrow">Speaking</p>
             <h3>Conversation seeds</h3>
@@ -184,18 +185,20 @@
                 <span>Useful for Task 2 and long-form answers</span>
               </div>
             </div>
+            <form id="speakingForm" class="speaking-form">
+              <div class="speaking-context">
+                <span class="eyebrow">Active practice</span>
+                <strong id="speakingArticle">Choose an article from the reading detail</strong>
+                <span id="speakingLaunchStatus" class="muted">The article prompt will appear here before you open ChatGPT.</span>
+              </div>
+              <label>Coach prompt<textarea id="speakingPrompt" readonly placeholder="Article-specific coach instructions"></textarea></label>
+              <div class="row speaking-tools"><button class="button secondary" type="button" data-copy-speaking>Copy prompt</button><a class="button secondary" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a></div>
+              <label>After-class review<textarea name="review" required placeholder="练习结束后，对 ChatGPT 说“生成课后总结”，然后把七段总结粘贴到这里。"></textarea></label>
+              <div class="form-actions"><span id="speakingSaved" class="muted"></span><button class="button primary" type="submit">Save to Obsidian</button></div>
+              <div id="speakingHistory" class="muted"></div>
+            </form>
           </div>
 
-          <div class="panel" id="anki">
-            <p class="eyebrow">Anki</p>
-            <h3>Export queue</h3>
-            <div class="anki-list">
-              <div class="anki-row"><span>ramp up investment</span><em>ready</em></div>
-              <div class="anki-row"><span>slash prices</span><em>ready</em></div>
-              <div class="anki-row"><span>in an AI push</span><em>ready</em></div>
-              <div class="anki-row"><span>landmark high</span><em>ready</em></div>
-            </div>
-          </div>
         </section>
       </main>
     </div>
@@ -213,9 +216,9 @@
           </div>
         </div>
         <div class="modal-grid">
-          <div class="detail-block">
-            <h4>全文级中英对照</h4>
-            <div id="detailBilingual" class="text-block"></div>
+          <div class="detail-block reading-detail">
+            <div class="detail-heading"><span class="eyebrow">Structured close reading</span><h4>文章脉络 · English / 中文</h4></div>
+            <div id="detailSections" class="reading-sections"></div>
           </div>
           <div class="detail-block">
             <h4>Vocabulary</h4>
@@ -230,6 +233,27 @@
             <div id="detailPrompts" class="sentence-list"></div>
           </div>
         </div>
+        <div class="modal-actions">
+          <a class="button secondary" href="https://chatgpt.com/" target="_blank" rel="noopener" data-detail-action="speaking">Start speaking practice</a>
+          <button class="button primary" data-detail-action="complete">Mark reading complete</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="modal hidden" id="importModal" aria-hidden="true">
+      <div class="modal-backdrop" data-import-close></div>
+      <article class="modal-sheet import-sheet">
+        <button class="close" data-import-close aria-label="Close">×</button>
+        <p class="eyebrow">Inbox import</p>
+        <h2>Bring in a clipping</h2>
+        <p class="form-note">先把材料收进来，之后再进入精读和口语练习。</p>
+        <form id="importForm" class="import-form">
+          <label>Article title<input name="title" required placeholder="例如: Why AI infrastructure matters" /></label>
+          <label>Source<input name="source" placeholder="TechRadar / Investopedia" /></label>
+          <label>URL<input name="url" type="url" required placeholder="https://..." /></label>
+          <label>Study priority<select name="priority"><option>A 精读</option><option>B 泛读+摘表达</option><option>稍后处理</option></select></label>
+          <div class="form-actions"><button type="button" class="button secondary" data-import-close>Cancel</button><button class="button primary" type="submit">Add to inbox</button></div>
+        </form>
       </article>
     </div>
 
