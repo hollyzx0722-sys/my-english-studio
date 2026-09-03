@@ -1,0 +1,155 @@
+{
+  "articles": [
+    {
+      "id": "1566bbf096eb",
+      "title": "TechRadar - Cloud Spending Soars As Hyperscalers Up AI Investment",
+      "source": "TechRadar",
+      "priority": "A 精读",
+      "tag": "AI infrastructure spending",
+      "image": "./assets/cloud-ai.png",
+      "url": "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026",
+      "status": "complete",
+      "summary": "文章核心是：AI 投资正在推动全球云支出上升，尤其是 hyperscalers 对数据中心、算力和云平台的投入。 这类文章的 IELTS 价值很高，因为它天然包含 trend, forecast, comparison, investment, infrastructure 等表达。 可作为 Writing Task 2 中“技术发展依赖基础设施与资本投入”的例证，也可用于 Speaking Part 3 讨论 AI、企业竞争和数字经济。",
+      "bilingual": "> 注：这里做的是全文脉络覆盖的学习摘录，不逐字转载全文；英文为原文信息的 paraphrase 和少量短语摘录，中文为学习向解释。\n\n### 1. Lead / News Hook\n\n**EN:** Cloud spending ==is rising rapidly== as the largest cloud providers increase investment in artificial intelligence infrastructure. The article frames this as a market-wide acceleration rather than a single-company story.\n\n**中:** 开头把“云支出上涨”和“AI 基建投资”直接连起来。注意它不是在讲某一家公司的短期新闻，而是在讲整个云计算市场因为 AI 需求而进入加速期。\n\n**可摘表达:** `cloud spending`, `soars`, `hyperscalers`, `AI investment`\n\n### 2. Market Forecast\n\n**EN:** The article emphasizes that cloud **expenditure** could ==reach a significant new high== in 2026, supported by continued demand for **AI computing, storage**, and **enterprise cloud services**.\n\n**中:** 这一段的重点是 forecast language：文章用“可能达到新高”来表达趋势预测。IELTS Task 1 可以借用这种写法描述 spending, demand, revenue, investment 的上升趋势。\n\n**可摘表达:** `could reach a landmark high`, `continued demand`, `enterprise cloud services`\n\n### 3. Why AI Drives Cloud Spending\n\n**EN:** AI systems require large-scale computing power, data storage, networking capacity, and specialized infrastructure. As more businesses adopt AI tools, cloud providers need to expand capacity and improve performance.\n\n**中:** 这里是典型因果链：AI adoption -> computing demand -> infrastructure expansion -> higher cloud spending。写作文时可以把它变成“技术创新背后需要物理和资本基础设施”的论证。\n\n**IELTS 句型:** As more companies adopt AI-powered services, demand for computing infrastructure is likely to rise.\n\n### 4. Role Of Hyperscalers\n\n**EN:** Hyperscalers such as AWS, Microsoft Azure, and Google Cloud are positioned as the main players because they already operate massive data-center networks and can spend heavily on AI capacity.\n\n**中:** `hyperscalers` 是主题词，指超大规模云服务商。这里的逻辑是：AI 基建门槛高，所以大公司更有优势；这也可以引出平台垄断、市场集中度和中小企业依赖大平台的问题。\n\n**可摘表达:** `massive data-center networks`, `AI capacity`, `major cloud providers`\n\n### 5. Business Implication\n\n**EN:** Rising AI investment may strengthen the cloud businesses of large technology companies, but it also increases pressure to manage capital expenditure, operating costs, and energy demand.\n\n**中:** 这段可以练 concession：AI 投资带来增长机会，但也带来成本和能源压力。写 IELTS 时不要只写“AI 好”，要写 trade-off。\n\n**IELTS 句型:** While investment in AI infrastructure can support innovation, it may also increase pressure on energy supply and operating costs.\n\n### 6. Reading Takeaway\n\n**EN:** The article's deeper point is that AI competition is also infrastructure competition: the companies that control cloud capacity may shape how quickly and cheaply AI tools spread.\n\n**中:** 最值得带走的观点：AI 竞争不只是模型和算法竞争，也是算力、云平台、资金和能源的竞争。这能成为 Technology / Economy / Business 类题目的高质量素材。",
+      "readingSections": [
+        {
+          "number": "01",
+          "title": "1. Lead / News Hook",
+          "en": "Cloud spending is rising rapidly as the largest cloud providers increase investment in artificial intelligence infrastructure. The article frames this as a market-wide acceleration rather than a single-company story.",
+          "zh": "开头把“云支出上涨”和“AI 基建投资”直接连起来。注意它不是在讲某一家公司的短期新闻，而是在讲整个云计算市场因为 AI 需求而进入加速期。",
+          "expression": "cloud spending, soars, hyperscalers, AI investment"
+        },
+        {
+          "number": "02",
+          "title": "2. Market Forecast",
+          "en": "The article emphasizes that cloud expenditure could reach a significant new high in 2026, supported by continued demand for AI computing, storage, and enterprise cloud services.",
+          "zh": "这一段的重点是 forecast language：文章用“可能达到新高”来表达趋势预测。IELTS Task 1 可以借用这种写法描述 spending, demand, revenue, investment 的上升趋势。",
+          "expression": "could reach a landmark high, continued demand, enterprise cloud services"
+        },
+        {
+          "number": "03",
+          "title": "3. Why AI Drives Cloud Spending",
+          "en": "AI systems require large-scale computing power, data storage, networking capacity, and specialized infrastructure. As more businesses adopt AI tools, cloud providers need to expand capacity and improve performance.",
+          "zh": "这里是典型因果链：AI adoption - computing demand - infrastructure expansion - higher cloud spending。写作文时可以把它变成“技术创新背后需要物理和资本基础设施”的论证。",
+          "expression": "As more companies adopt AI-powered services, demand for computing infrastructure is likely to rise."
+        },
+        {
+          "number": "04",
+          "title": "4. Role Of Hyperscalers",
+          "en": "Hyperscalers such as AWS, Microsoft Azure, and Google Cloud are positioned as the main players because they already operate massive data-center networks and can spend heavily on AI capacity.",
+          "zh": "hyperscalers 是主题词，指超大规模云服务商。这里的逻辑是：AI 基建门槛高，所以大公司更有优势；这也可以引出平台垄断、市场集中度和中小企业依赖大平台的问题。",
+          "expression": "massive data-center networks, AI capacity, major cloud providers"
+        },
+        {
+          "number": "05",
+          "title": "5. Business Implication",
+          "en": "Rising AI investment may strengthen the cloud businesses of large technology companies, but it also increases pressure to manage capital expenditure, operating costs, and energy demand.",
+          "zh": "这段可以练 concession：AI 投资带来增长机会，但也带来成本和能源压力。写 IELTS 时不要只写“AI 好”，要写 trade-off。",
+          "expression": "While investment in AI infrastructure can support innovation, it may also increase pressure on energy supply and operating costs."
+        },
+        {
+          "number": "06",
+          "title": "6. Reading Takeaway",
+          "en": "The article's deeper point is that AI competition is also infrastructure competition: the companies that control cloud capacity may shape how quickly and cheaply AI tools spread.",
+          "zh": "最值得带走的观点：AI 竞争不只是模型和算法竞争，也是算力、云平台、资金和能源的竞争。这能成为 Technology / Economy / Business 类题目的高质量素材。",
+          "expression": ""
+        }
+      ],
+      "vocab": [
+        "cloud spending soars",
+        "hyperscalers",
+        "ramp up investment",
+        "landmark high",
+        "AI investment"
+      ],
+      "sentences": [
+        "As demand for AI services grows, cloud providers are likely to ramp up investment in infrastructure, even though this may increase pressure on energy use and operating costs.",
+        "Main clause: cloud providers are likely to ramp up investment",
+        "Modifier: As demand for AI services grows"
+      ],
+      "prompts": [
+        "What is the difference between AI software and AI infrastructure?",
+        "Why do hyperscalers benefit from rising AI demand?",
+        "Could cloud concentration become a risk for smaller companies?"
+      ],
+      "updatedAt": "2026-08-26T07:27:47.570Z",
+      "speakingSessions": []
+    },
+    {
+      "id": "dc4ebf955a5f",
+      "title": "Investopedia - Alibaba Slashes Prices For Cloud Products",
+      "source": "Investopedia",
+      "priority": "B 泛读+摘表达",
+      "tag": "cloud pricing strategy",
+      "image": "./assets/cloud-ai.png",
+      "url": "https://www.investopedia.com/alibaba-slashes-prices-for-cloud-products-to-international-customers-in-ai-push-8628371",
+      "status": "complete",
+      "summary": "文章核心是：Alibaba Cloud 面向国际客户下调云产品价格，以争取 AI 相关需求。 它不是最适合精读的长文，但很适合积累商业新闻表达：slash prices, price cuts, international customers, in an AI push。 可以作为云计算竞争的补充案例：当企业争夺 AI 开发者和海外客户时，价格会成为市场策略的一部分。",
+      "bilingual": "> 注：这里做的是全文脉络覆盖的学习摘录，不逐字转载全文；英文为原文信息的 paraphrase 和少量短语摘录，中文为学习向解释。\n\n### 1. Lead / Company Move\n\n**EN:** Alibaba Cloud cut prices for cloud products offered to international customers, presenting the move as part of a broader push into artificial intelligence services.\n\n**中:** 开头是典型商业新闻句式：公司 + 动作 + 对象 + 战略目的。这里的动作是 cut/slash prices，对象是 international customers，目的跟 AI push 有关。\n\n**可摘表达:** `slash prices`, `cloud products`, `international customers`, `in an AI push`\n\n### 2. Strategic Purpose\n\n**EN:** The price reductions are designed to make Alibaba's cloud services more attractive outside China, especially as demand for AI-related computing grows.\n\n**中:** 这一段解释“为什么降价”：不是单纯促销，而是为了提高海外市场吸引力，并借 AI 需求扩大客户基础。可用于 globalization 和 market expansion 话题。\n\n**IELTS 句型:** Lower prices can make advanced digital services more accessible to overseas customers.\n\n### 3. Market Competition\n\n**EN:** The article places Alibaba's move within a competitive cloud market where providers compete on price, performance, and AI capabilities.\n\n**中:** 这里把单家公司动作放入行业竞争背景：云服务商不仅比技术，也比价格、性能和 AI 能力。适合用来说明 market competition can benefit consumers, but it may pressure companies' profit margins。\n\n**可摘表达:** `competitive cloud market`, `compete on price`, `AI capabilities`\n\n### 4. International Expansion\n\n**EN:** By targeting international customers, Alibaba Cloud is trying to strengthen its presence beyond its domestic market and appeal to businesses that need affordable cloud infrastructure.\n\n**中:** 这一段的核心是 overseas expansion。对 IELTS 来说，可以连接“企业全球化”“数字基础设施普及”“发展中国家/中小企业获得技术资源”等论点。\n\n**IELTS 句型:** By lowering the cost of cloud services, technology firms may help smaller businesses access tools that were previously too expensive.\n\n### 5. Business Trade-Off\n\n**EN:** Price cuts may attract new customers and support AI adoption, but they can also reduce margins and force competitors to respond with their own discounts.\n\n**中:** 这就是商业新闻里最常见的利弊结构：降价能拉新，但会压缩利润，也可能引发价格战。写作时可以用 may..., but... 来保持论证平衡。\n\n**可摘表达:** `attract new customers`, `support AI adoption`, `reduce margins`, `force competitors to respond`\n\n### 6. Reading Takeaway\n\n**EN:** The article shows that the AI race is not only about advanced models. It also depends on cloud pricing, international access, and whether companies can make computing resources affordable at scale.\n\n**中:** 最值得带走的观点：AI 普及不只是技术问题，也是价格和可及性问题。云服务降价可能降低 AI 创业和企业数字化门槛。",
+      "readingSections": [
+        {
+          "number": "01",
+          "title": "1. Lead / Company Move",
+          "en": "Alibaba Cloud cut prices for cloud products offered to international customers, presenting the move as part of a broader push into artificial intelligence services.",
+          "zh": "开头是典型商业新闻句式：公司 + 动作 + 对象 + 战略目的。这里的动作是 cut/slash prices，对象是 international customers，目的跟 AI push 有关。",
+          "expression": "slash prices, cloud products, international customers, in an AI push"
+        },
+        {
+          "number": "02",
+          "title": "2. Strategic Purpose",
+          "en": "The price reductions are designed to make Alibaba's cloud services more attractive outside China, especially as demand for AI-related computing grows.",
+          "zh": "这一段解释“为什么降价”：不是单纯促销，而是为了提高海外市场吸引力，并借 AI 需求扩大客户基础。可用于 globalization 和 market expansion 话题。",
+          "expression": "Lower prices can make advanced digital services more accessible to overseas customers."
+        },
+        {
+          "number": "03",
+          "title": "3. Market Competition",
+          "en": "The article places Alibaba's move within a competitive cloud market where providers compete on price, performance, and AI capabilities.",
+          "zh": "这里把单家公司动作放入行业竞争背景：云服务商不仅比技术，也比价格、性能和 AI 能力。适合用来说明 market competition can benefit consumers, but it may pressure companies' profit margins。",
+          "expression": "competitive cloud market, compete on price, AI capabilities"
+        },
+        {
+          "number": "04",
+          "title": "4. International Expansion",
+          "en": "By targeting international customers, Alibaba Cloud is trying to strengthen its presence beyond its domestic market and appeal to businesses that need affordable cloud infrastructure.",
+          "zh": "这一段的核心是 overseas expansion。对 IELTS 来说，可以连接“企业全球化”“数字基础设施普及”“发展中国家/中小企业获得技术资源”等论点。",
+          "expression": "By lowering the cost of cloud services, technology firms may help smaller businesses access tools that were previously too expensive."
+        },
+        {
+          "number": "05",
+          "title": "5. Business Trade-Off",
+          "en": "Price cuts may attract new customers and support AI adoption, but they can also reduce margins and force competitors to respond with their own discounts.",
+          "zh": "这就是商业新闻里最常见的利弊结构：降价能拉新，但会压缩利润，也可能引发价格战。写作时可以用 may..., but... 来保持论证平衡。",
+          "expression": "attract new customers, support AI adoption, reduce margins, force competitors to respond"
+        },
+        {
+          "number": "06",
+          "title": "6. Reading Takeaway",
+          "en": "The article shows that the AI race is not only about advanced models. It also depends on cloud pricing, international access, and whether companies can make computing resources affordable at scale.",
+          "zh": "最值得带走的观点：AI 普及不只是技术问题，也是价格和可及性问题。云服务降价可能降低 AI 创业和企业数字化门槛。",
+          "expression": ""
+        }
+      ],
+      "vocab": [
+        "slash prices",
+        "price cuts",
+        "international customers",
+        "in an AI push",
+        "cloud products"
+      ],
+      "sentences": [
+        "By cutting prices for international customers, Alibaba Cloud may make its services more attractive to AI developers while putting pressure on competitors to respond.",
+        "Main clause: Alibaba Cloud may make its services more attractive",
+        "Modifier: By cutting prices for international customers"
+      ],
+      "prompts": [
+        "Why might a company cut prices in an overseas market?",
+        "How can cheaper cloud services affect AI startups?",
+        "Is price competition always good for consumers?"
+      ],
+      "updatedAt": "2026-06-18T10:03:12.800Z",
+      "speakingSessions": []
+    }
+  ],
+  "exportedAt": "2026-09-03T11:31:10.973Z"
+}

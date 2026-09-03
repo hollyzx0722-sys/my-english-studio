@@ -112,7 +112,7 @@ let articles = scanVault();
 speakingSessions = scanSpeakingSessions();
 function notify() { for (const response of clients) response.write(`data: ${JSON.stringify({ type: 'sync', at: lastSync })}\n\n`); }
 function scheduleScan() { clearTimeout(debounceTimer); debounceTimer = setTimeout(() => { articles = scanVault(); speakingSessions = scanSpeakingSessions(); notify(); }, 250); }
-if (fs.existsSync(VAULT)) fs.watch(VAULT, { recursive: true }, scheduleScan);
+if (require.main === module && fs.existsSync(VAULT)) fs.watch(VAULT, { recursive: true }, scheduleScan);
 
 function json(response, value, status = 200) { response.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' }); response.end(JSON.stringify(value)); }
 function readJson(request) {
@@ -153,4 +153,6 @@ const server = http.createServer((request, response) => {
   if (url.pathname === '/api/events') { response.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive' }); response.write(`data: ${JSON.stringify({ type: 'connected', at: lastSync })}\n\n`); clients.add(response); request.on('close', () => clients.delete(response)); return; }
   staticFile(url.pathname, response);
 });
-server.listen(PORT, '127.0.0.1', () => console.log(`My English Studio: http://127.0.0.1:${PORT}`));
+if (require.main === module) server.listen(PORT, '127.0.0.1', () => console.log(`My English Studio: http://127.0.0.1:${PORT}`));
+
+module.exports = { VAULT, scanVault };

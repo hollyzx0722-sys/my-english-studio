@@ -166,7 +166,27 @@ async function hydrateFromVault() {
     syncMode = 'browser';
     saveSpeakingReview.textContent = 'Save in this browser';
     syncState.innerHTML = '<span></span> Browser-only mode';
-    syncDetail.textContent = 'Online data stays in this browser · Use local mode for Obsidian sync';
+    try {
+      const response = await fetch('./data/articles.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Published study notes are unavailable');
+      const payload = await response.json();
+      const existingById = new Map(articles.map((article) => [article.id, article]));
+      const published = (payload.articles || []).map((article) => ({
+        ...article,
+        speakingSessions: existingById.get(article.id)?.speakingSessions || []
+      }));
+      const browserOnly = articles.filter((article) => article.id.startsWith('local-'));
+      articles.splice(0, articles.length, ...published, ...browserOnly);
+      save(); renderFeed(); renderVocabulary();
+      document.querySelector('#notesCount').textContent = published.length;
+      document.querySelector('#topicsCount').textContent = new Set(published.map((article) => article.tag).filter(Boolean)).size;
+      document.querySelector('#sentencesCount').textContent = published.reduce((total, article) => total + (article.sentences?.length || 0), 0);
+      document.querySelector('#readingTodo').textContent = published.filter((article) => article.status === 'inbox').length;
+      document.querySelector('#expressionCount').textContent = vocabularyItems().length;
+      syncDetail.textContent = `${published.length} published study notes · Use local mode for live Obsidian sync`;
+    } catch (publishedError) {
+      syncDetail.textContent = 'Online data stays in this browser · Use local mode for Obsidian sync';
+    }
     document.querySelector('#speakingDone').textContent = articles.reduce((total, article) => total + (article.speakingSessions?.length || 0), 0);
   }
 }

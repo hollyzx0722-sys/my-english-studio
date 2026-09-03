@@ -20,3 +20,13 @@ Then open <http://127.0.0.1:4174/>.
 The repository includes a GitHub Actions workflow in `.github/workflows/pages.yml`. After pushing the repository, enable Pages in the repository settings and select **GitHub Actions** as the source.
 
 GitHub Pages cannot access a local Obsidian vault. Keep using local mode when you need live vault sync.
+
+## Publish Obsidian study notes
+
+The public site loads exported study notes from `data/articles.json`. Clipping source files and speaking-review text are not included.
+
+```bash
+./publish.sh
+```
+
+This exports the current study notes, commits the generated data, and pushes `main` so GitHub Pages redeploys.
