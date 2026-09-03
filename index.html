@@ -194,7 +194,7 @@
               <label>Coach prompt<textarea id="speakingPrompt" readonly placeholder="Article-specific coach instructions"></textarea></label>
               <div class="row speaking-tools"><button class="button secondary" type="button" data-copy-speaking>Copy prompt</button><a class="button secondary" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a></div>
               <label>After-class review<textarea name="review" required placeholder="练习结束后，对 ChatGPT 说“生成课后总结”，然后把七段总结粘贴到这里。"></textarea></label>
-              <div class="form-actions"><span id="speakingSaved" class="muted"></span><button class="button primary" type="submit">Save to Obsidian</button></div>
+              <div class="form-actions"><span id="speakingSaved" class="muted"></span><button class="button primary" type="submit" id="saveSpeakingReview">Save review</button></div>
               <div id="speakingHistory" class="muted"></div>
             </form>
           </div>

@@ -19,6 +19,7 @@ const importModal = document.querySelector('#importModal');
 let activeArticle = null;
 let activeSpeakingArticle = null;
 let vaultEvents = null;
+let syncMode = 'browser';
 const detailTitle = document.querySelector('#detailTitle');
 const detailSummary = document.querySelector('#detailSummary');
 const detailImage = document.querySelector('#detailImage');
@@ -33,6 +34,7 @@ const speakingArticle = document.querySelector('#speakingArticle');
 const speakingPrompt = document.querySelector('#speakingPrompt');
 const speakingLaunchStatus = document.querySelector('#speakingLaunchStatus');
 const speakingHistory = document.querySelector('#speakingHistory');
+const saveSpeakingReview = document.querySelector('#saveSpeakingReview');
 
 function statusLabel(status) { return { inbox: 'Inbox', reading: '精读中', complete: '已完成' }[status] || 'Inbox'; }
 function escapeHtml(value = '') { return String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[character])); }
@@ -116,7 +118,8 @@ function renderSpeaking(article) {
   localStorage.setItem('my-english-active-speaking', article.id);
   speakingArticle.textContent = article.title;
   speakingPrompt.value = buildSpeakingPrompt(article);
-  speakingHistory.textContent = article.speakingSessions?.length ? `${article.speakingSessions.length} speaking review${article.speakingSessions.length === 1 ? '' : 's'} saved in Obsidian` : 'No speaking review saved for this article yet';
+  const destination = syncMode === 'obsidian' ? 'Obsidian' : 'this browser';
+  speakingHistory.textContent = article.speakingSessions?.length ? `${article.speakingSessions.length} speaking review${article.speakingSessions.length === 1 ? '' : 's'} saved in ${destination}` : 'No speaking review saved for this article yet';
 }
 async function copySpeakingPrompt() {
   if (!speakingPrompt.value) return false;
@@ -147,6 +150,8 @@ async function hydrateFromVault() {
     const response = await fetch('/api/articles');
     if (!response.ok) throw new Error('Local sync service is not running');
     const payload = await response.json();
+    syncMode = 'obsidian';
+    saveSpeakingReview.textContent = 'Save to Obsidian';
     const localOnly = articles.filter((item) => item.id.startsWith('local-'));
     articles.splice(0, articles.length, ...payload.articles, ...localOnly);
     save(); renderFeed(); renderVocabulary(); renderSync(payload);
@@ -158,8 +163,11 @@ async function hydrateFromVault() {
       vaultEvents.addEventListener('message', () => hydrateFromVault());
     }
   } catch (error) {
+    syncMode = 'browser';
+    saveSpeakingReview.textContent = 'Save in this browser';
     syncState.innerHTML = '<span></span> Browser-only mode';
-    syncDetail.textContent = 'Start server.js to connect the Obsidian vault';
+    syncDetail.textContent = 'Online data stays in this browser · Use local mode for Obsidian sync';
+    document.querySelector('#speakingDone').textContent = articles.reduce((total, article) => total + (article.speakingSessions?.length || 0), 0);
   }
 }
 
@@ -230,10 +238,21 @@ document.querySelector('#speakingForm').addEventListener('submit', async (event)
   const status = document.querySelector('#speakingSaved');
   if (!activeSpeakingArticle) { status.textContent = 'Choose an article first.'; return; }
   status.textContent = 'Saving...';
+  const review = new FormData(event.currentTarget).get('review').trim();
+  if (syncMode === 'browser') {
+    const practicedAt = new Date().toISOString();
+    activeSpeakingArticle.speakingSessions = [...(activeSpeakingArticle.speakingSessions || []), { practicedAt, review, storage: 'browser' }];
+    save();
+    event.currentTarget.querySelector('[name="review"]').value = '';
+    status.textContent = 'Saved in this browser';
+    renderSpeaking(activeSpeakingArticle);
+    document.querySelector('#speakingDone').textContent = articles.reduce((total, article) => total + (article.speakingSessions?.length || 0), 0);
+    renderVocabulary();
+    return;
+  }
   try {
-    const review = new FormData(event.currentTarget).get('review').trim();
     const response = await fetch('/api/speaking-sessions', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ articleId: activeSpeakingArticle.id, review }) });
-    const payload = await response.json();
+    const payload = await response.json().catch(() => ({}));
     if (!response.ok) throw new Error(payload.error || 'Unable to save review');
     event.currentTarget.querySelector('[name="review"]').value = '';
     status.textContent = 'Saved to Obsidian';
