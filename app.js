@@ -173,7 +173,7 @@ async function hydrateFromVault() {
 
 feed.addEventListener('click', (event) => { const card = event.target.closest('[data-id]'); if (card) openDetail(articles.find((item) => item.id === card.dataset.id)); });
 document.querySelectorAll('[data-open-import]').forEach((button) => button.addEventListener('click', () => { importModal.classList.remove('hidden'); importModal.setAttribute('aria-hidden', 'false'); }));
-document.querySelectorAll('#importModal .close, #importModal .form-actions [data-import-close]').forEach((button) => button.addEventListener('click', () => closeModal(importModal)));
+document.querySelectorAll('#importModal [data-import-close]').forEach((button) => button.addEventListener('click', () => closeModal(importModal)));
 document.querySelectorAll('[data-scroll]').forEach((button) => button.addEventListener('click', () => document.querySelector(`#${button.dataset.scroll}`).scrollIntoView({ behavior: 'smooth' })));
 
 document.querySelector('#importForm').addEventListener('submit', (event) => {
