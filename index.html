@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260903-2" />
+    <link rel="stylesheet" href="./styles.css?v=20260904-1" />
   </head>
   <body>
     <div class="shell">
@@ -71,41 +71,42 @@
           <button class="chip" data-filter="Speaking">Speaking</button>
         </section>
 
-        <section class="grid">
-          <article class="card feature">
-            <img src="./assets/cloud-ai.png" alt="Cloud AI article cover" />
-            <div class="card-body">
-              <div class="meta">
-                <span class="pill gold">A 精读</span>
-                <span class="pill">TechRadar</span>
-              </div>
-              <h2>Deep Reading: Cloud & AI</h2>
-              <p>Cloud spending, hyperscalers, pricing pressure, and AI investment.</p>
-              <div class="card-footer">
-                <span>12 vocab</span>
-                <span>5 sentences</span>
-                <span>1 speaking set</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card feature">
-            <img src="./assets/speaking.png" alt="Speaking practice cover" />
-            <div class="card-body">
-              <div class="meta">
-                <span class="pill pink">Speaking</span>
-                <span class="pill">Coach Prompt</span>
-              </div>
-              <h2>Live English Coach</h2>
-              <p>Topic-led conversation practice with short corrections and review.</p>
-              <div class="card-footer">
-                <span>3 sessions</span>
-                <span>2 reviews</span>
-                <span>Daily use</span>
-              </div>
-            </div>
-          </article>
-
+        <section class="guide" aria-labelledby="guideTitle">
+          <div class="guide-intro">
+            <p class="eyebrow">Quick start manual</p>
+            <h2 id="guideTitle">第一次使用，从这里开始</h2>
+            <p>把一篇喜欢的外刊，变成一次完整的 IELTS 学习循环。每次只需要沿着四个步骤向下走。</p>
+            <button class="button primary" type="button" data-open-import>导入第一篇材料</button>
+          </div>
+          <div class="guide-flow" aria-label="学习流程：收集材料、精读文章、口语陪练、复习沉淀">
+            <button class="guide-step guide-step-blue" type="button" data-scroll="inbox">
+              <span class="guide-number">01</span>
+              <span class="guide-sketch sketch-inbox"><i></i><i></i><i></i></span>
+              <strong>收集材料</strong>
+              <small>把 Clipping 放进 Inbox</small>
+            </button>
+            <span class="guide-arrow" aria-hidden="true">→</span>
+            <button class="guide-step guide-step-gold" type="button" data-scroll="english">
+              <span class="guide-number">02</span>
+              <span class="guide-sketch sketch-reading"><i></i><i></i></span>
+              <strong>进入精读</strong>
+              <small>看中英对照与长难句</small>
+            </button>
+            <span class="guide-arrow" aria-hidden="true">→</span>
+            <button class="guide-step guide-step-pink" type="button" data-scroll="speaking">
+              <span class="guide-number">03</span>
+              <span class="guide-sketch sketch-speaking"><i></i><i></i><i></i></span>
+              <strong>开始口语</strong>
+              <small>复制提示词，打开 ChatGPT</small>
+            </button>
+            <span class="guide-arrow" aria-hidden="true">→</span>
+            <button class="guide-step guide-step-green" type="button" data-scroll="vocabulary">
+              <span class="guide-number">04</span>
+              <span class="guide-sketch sketch-review"><i></i><i></i><i></i></span>
+              <strong>复习沉淀</strong>
+              <small>回看词汇，保存课后总结</small>
+            </button>
+          </div>
         </section>
 
         <section class="section" id="english" data-page-section="reading">
@@ -257,6 +258,6 @@
       </article>
     </div>
 
-    <script src="./app.js?v=20260903-3"></script>
+    <script src="./app.js?v=20260904-1"></script>
   </body>
 </html>
