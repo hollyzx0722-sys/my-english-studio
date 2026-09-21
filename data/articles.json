@@ -1,6 +1,251 @@
 {
   "articles": [
     {
+      "id": "46169d203685",
+      "title": "Decision Making and Happiness",
+      "source": "IELTS Fever",
+      "priority": "A 精读",
+      "tag": "Choice psychology and well-being",
+      "image": "./assets/cloud-ai.png",
+      "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-3",
+      "status": "complete",
+      "summary": "The passage challenges the belief that more choice always improves life. It contrasts maximizers, who search for the best possible option, with satisficers, who accept an option that is good enough. More alternatives increase comparison, opportunity costs, regret, and dissatisfaction, especially for maximizers. 文章挑战“选择越多越幸福”的直觉。它比较追求最佳选项的 maximizers 与接受“足够好”的 satisficers，指出过多选项会增加比较、机会成本、后悔与不满，对最大化者尤其明显。",
+      "bilingual": "### 1. When More Is Not Better\n\n**EN:** Choice can enhance life, but research suggests that unlimited options may reduce psychological well-being. The assumption that more choice is always better fails to account for cognitive and emotional costs.\n\n**中:** 选择可以改善生活，但无限选项可能降低心理幸福感。“越多越好”的假设忽略了认知与情绪成本。\n\n**可摘表达:** enhance our lives, infinite options, strongly suggest, more is not always better than less\n\n### 2. Maximizers And Satisficers\n\n**EN:** Maximizers seek the best possible choice, whereas satisficers stop once an option meets their standards. The former compare more products, spend longer deciding, and continue evaluating after purchase.\n\n**中:** 最大化者寻找最佳选择，满足者在选项达到标准后停止。前者比较更多、决策更慢，购买后仍继续评估。\n\n**可摘表达:** aim for, settle for, meet one's standards, make purchasing decisions\n\n### 3. The Emotional Cost Of Maximizing\n\n**EN:** Maximizers gain little pleasure from outperforming others but feel substantial dissatisfaction when doing worse. They experience more regret, recover more slowly from disappointment, and ruminate more.\n\n**中:** 最大化者超过别人时获得的快乐有限，落后时却非常不满。他们更容易后悔，也更难从失望中恢复，并会反复纠结。\n\n**可摘表达:** be prone to, a sense of well-being, recover from, brood or ruminate\n\n### 4. Opportunity Costs Multiply\n\n**EN:** Every choice means giving up alternatives. Because people respond more strongly to losses than gains, a larger choice set creates more perceived losses and lowers satisfaction with the final decision.\n\n**中:** 每次选择都意味着放弃其他机会。由于人对损失比收益更敏感，选项越多，感知到的损失越多，对最终决定越不满意。\n\n**IELTS 句型:** The more alternatives people consider, the more opportunity costs they incur and the less satisfaction they may derive from their final choice.\n\n### 5. Regret And Sunk Costs\n\n**EN:** Fear of future regret pushes people to search for the perfect option. The theatre-ticket experiment also shows sunk-cost effects: people who paid full price attended more often because wasting an expensive ticket felt like a greater loss.\n\n**中:** 对未来后悔的担忧会推动人寻找完美选项。剧院票实验还展示沉没成本效应：全价购票者更常出席，因为浪费昂贵票券意味着更大损失。\n\n**可摘表达:** regret sensitivity, incur a cost, sunk costs, constitute a loss\n\n### 6. Restricting Choice Can Increase Happiness\n\n**EN:** Satisficing reduces search, comparison, and opportunity costs. For decisions that are not crucial, deliberately limiting options can protect time and well-being without sacrificing meaningful quality.\n\n**中:** “足够好”能减少搜索、比较与机会成本。对于不重要的决定，主动限制选项可以节省时间并保护幸福感，而不必牺牲真正重要的质量。\n\n**IELTS 句型:** Limiting minor choices can reduce decision fatigue and leave more attention for decisions that genuinely matter.",
+      "readingSections": [
+        {
+          "number": "01",
+          "title": "1. When More Is Not Better",
+          "en": "Choice can enhance life, but research suggests that unlimited options may reduce psychological well-being. The assumption that more choice is always better fails to account for cognitive and emotional costs.",
+          "zh": "选择可以改善生活，但无限选项可能降低心理幸福感。“越多越好”的假设忽略了认知与情绪成本。",
+          "expression": "enhance our lives, infinite options, strongly suggest, more is not always better than less"
+        },
+        {
+          "number": "02",
+          "title": "2. Maximizers And Satisficers",
+          "en": "Maximizers seek the best possible choice, whereas satisficers stop once an option meets their standards. The former compare more products, spend longer deciding, and continue evaluating after purchase.",
+          "zh": "最大化者寻找最佳选择，满足者在选项达到标准后停止。前者比较更多、决策更慢，购买后仍继续评估。",
+          "expression": "aim for, settle for, meet one's standards, make purchasing decisions"
+        },
+        {
+          "number": "03",
+          "title": "3. The Emotional Cost Of Maximizing",
+          "en": "Maximizers gain little pleasure from outperforming others but feel substantial dissatisfaction when doing worse. They experience more regret, recover more slowly from disappointment, and ruminate more.",
+          "zh": "最大化者超过别人时获得的快乐有限，落后时却非常不满。他们更容易后悔，也更难从失望中恢复，并会反复纠结。",
+          "expression": "be prone to, a sense of well-being, recover from, brood or ruminate"
+        },
+        {
+          "number": "04",
+          "title": "4. Opportunity Costs Multiply",
+          "en": "Every choice means giving up alternatives. Because people respond more strongly to losses than gains, a larger choice set creates more perceived losses and lowers satisfaction with the final decision.",
+          "zh": "每次选择都意味着放弃其他机会。由于人对损失比收益更敏感，选项越多，感知到的损失越多，对最终决定越不满意。",
+          "expression": "The more alternatives people consider, the more opportunity costs they incur and the less satisfaction they may derive from their final choice."
+        },
+        {
+          "number": "05",
+          "title": "5. Regret And Sunk Costs",
+          "en": "Fear of future regret pushes people to search for the perfect option. The theatre-ticket experiment also shows sunk-cost effects: people who paid full price attended more often because wasting an expensive ticket felt like a greater loss.",
+          "zh": "对未来后悔的担忧会推动人寻找完美选项。剧院票实验还展示沉没成本效应：全价购票者更常出席，因为浪费昂贵票券意味着更大损失。",
+          "expression": "regret sensitivity, incur a cost, sunk costs, constitute a loss"
+        },
+        {
+          "number": "06",
+          "title": "6. Restricting Choice Can Increase Happiness",
+          "en": "Satisficing reduces search, comparison, and opportunity costs. For decisions that are not crucial, deliberately limiting options can protect time and well-being without sacrificing meaningful quality.",
+          "zh": "“足够好”能减少搜索、比较与机会成本。对于不重要的决定，主动限制选项可以节省时间并保护幸福感，而不必牺牲真正重要的质量。",
+          "expression": "Limiting minor choices can reduce decision fatigue and leave more attention for decisions that genuinely matter."
+        }
+      ],
+      "vocab": [
+        "enhance our lives",
+        "a maximizer",
+        "a satisficer",
+        "settle for",
+        "meet one's standards",
+        "be prone to regret",
+        "opportunity cost",
+        "derive satisfaction from",
+        "incur a cost",
+        "sunk cost",
+        "decision fatigue",
+        "restrict one's options"
+      ],
+      "sentences": [
+        "Although some choice is undoubtedly better than none, research suggests that expanding the number of alternatives can make people less satisfied with the decision they eventually make.",
+        "If opportunity costs reduce the desirability of a preferred choice, then the more alternatives there are, the deeper the sense of loss becomes.",
+        "People who paid full price were more likely to attend performances because failing to use a costly ticket would constitute a greater perceived loss."
+      ],
+      "prompts": [
+        "Why can too many choices make people less happy?",
+        "Are you more of a maximizer or a satisficer in daily life?",
+        "How do opportunity costs affect important decisions?",
+        "Which everyday choices would you deliberately limit to reduce decision fatigue?"
+      ],
+      "updatedAt": "2026-09-20T07:54:36.864Z",
+      "speakingSessions": []
+    },
+    {
+      "id": "412b0dcbda0e",
+      "title": "Stealth Forces in Weight Loss",
+      "source": "IELTS Fever",
+      "priority": "A 精读",
+      "tag": "Biology and weight management",
+      "image": "./assets/cloud-ai.png",
+      "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-2",
+      "status": "complete",
+      "summary": "The passage argues that body weight cannot be explained by willpower alone. Genes, leptin, metabolism, prenatal conditions, insulin response, diet type, and even viral infection may interact. Effective weight management therefore requires evidence-based and individualized solutions rather than moral judgement. 文章指出体重并非单靠意志力决定。基因、瘦素、代谢、胎儿期环境、胰岛素反应、饮食类型，甚至病毒感染都可能共同作用。因此，减重需要基于证据的个体化方案，而非简单归咎于懒惰或贪吃。",
+      "bilingual": "### 1. Competing Explanations Of Obesity\n\n**EN:** Researchers from different disciplines offer apparently incompatible theories of obesity. The passage uses the fable of blind men and an elephant to show that each field may understand only part of a complex problem.\n\n**中:** 不同学科对肥胖给出看似冲突的解释。文章借“盲人摸象”说明每个领域可能只看到了复杂问题的一部分。\n\n**可摘表达:** bafflingly incompatible, attribute A to B, be predisposed to, a complex interaction\n\n### 2. Biology Resists Weight Loss\n\n**EN:** Leptin and metabolism help regulate body weight. After obese people lose weight, falling leptin levels and a slower metabolism can create chronic hunger and make long-term maintenance difficult.\n\n**中:** 瘦素和代谢参与调节体重。减重后瘦素水平和代谢下降，可能造成长期饥饿，使维持体重非常困难。\n\n**可摘表达:** plummet, conserve fat, keep the weight off, chronic hunger\n\n### 3. Health Matters More Than Appearance\n\n**EN:** Moderate exercise alone may not produce dramatic weight loss, but radical and sustainable lifestyle changes can help. The realistic goal should be improved health, not resemblance to an idealized body image.\n\n**中:** 温和运动未必带来显著减重，但持续的生活方式调整仍有价值。合理目标应是改善健康，而非追求理想化外形。\n\n**IELTS 句型:** The aim should not be to achieve an unrealistic appearance, but to reduce measurable health risks.\n\n### 4. Genes Meet The Prenatal Environment\n\n**EN:** Genetic predisposition interacts with conditions in the womb. Maternal diabetes and obesity may increase a child's later risk through metabolic imprinting, showing that weight regulation can begin before birth.\n\n**中:** 遗传倾向会与胎儿期环境互动。孕妇糖尿病和肥胖可能通过代谢印记增加孩子日后肥胖风险，说明体重调节可能在出生前就开始。\n\n**可摘表达:** metabolic imprinting, maternal diabetes, increase the risk of, before birth\n\n### 5. The Same Diet Does Not Fit Everyone\n\n**EN:** A study comparing low-fat and low-glycemic-load diets found that insulin response affected outcomes. High insulin secretors performed best on the low-glycemic-load diet, supporting a personalized approach.\n\n**中:** 一项比较低脂和低升糖负荷饮食的研究发现，胰岛素反应会影响结果。高胰岛素分泌者在低升糖负荷饮食中表现最好，说明方案需要因人而异。\n\n**可摘表达:** fare better, gain weight back, low-glycemic-load diet, an individualized approach\n\n### 6. Could A Virus Contribute To Obesity?\n\n**EN:** Dhurandhar's experiments suggest that some viruses may trigger fat accumulation. By identifying a gene necessary for AD-36-related obesity, researchers opened the possibility of an obesity vaccine.\n\n**中:** Dhurandhar 的实验表明某些病毒可能促使脂肪积累。研究者识别出与 AD-36 肥胖相关的关键基因，也提出了肥胖疫苗的可能性。\n\n**IELTS 句型:** Scientific evidence can challenge moral assumptions by revealing biological causes behind behaviour and health outcomes.",
+      "readingSections": [
+        {
+          "number": "01",
+          "title": "1. Competing Explanations Of Obesity",
+          "en": "Researchers from different disciplines offer apparently incompatible theories of obesity. The passage uses the fable of blind men and an elephant to show that each field may understand only part of a complex problem.",
+          "zh": "不同学科对肥胖给出看似冲突的解释。文章借“盲人摸象”说明每个领域可能只看到了复杂问题的一部分。",
+          "expression": "bafflingly incompatible, attribute A to B, be predisposed to, a complex interaction"
+        },
+        {
+          "number": "02",
+          "title": "2. Biology Resists Weight Loss",
+          "en": "Leptin and metabolism help regulate body weight. After obese people lose weight, falling leptin levels and a slower metabolism can create chronic hunger and make long-term maintenance difficult.",
+          "zh": "瘦素和代谢参与调节体重。减重后瘦素水平和代谢下降，可能造成长期饥饿，使维持体重非常困难。",
+          "expression": "plummet, conserve fat, keep the weight off, chronic hunger"
+        },
+        {
+          "number": "03",
+          "title": "3. Health Matters More Than Appearance",
+          "en": "Moderate exercise alone may not produce dramatic weight loss, but radical and sustainable lifestyle changes can help. The realistic goal should be improved health, not resemblance to an idealized body image.",
+          "zh": "温和运动未必带来显著减重，但持续的生活方式调整仍有价值。合理目标应是改善健康，而非追求理想化外形。",
+          "expression": "The aim should not be to achieve an unrealistic appearance, but to reduce measurable health risks."
+        },
+        {
+          "number": "04",
+          "title": "4. Genes Meet The Prenatal Environment",
+          "en": "Genetic predisposition interacts with conditions in the womb. Maternal diabetes and obesity may increase a child's later risk through metabolic imprinting, showing that weight regulation can begin before birth.",
+          "zh": "遗传倾向会与胎儿期环境互动。孕妇糖尿病和肥胖可能通过代谢印记增加孩子日后肥胖风险，说明体重调节可能在出生前就开始。",
+          "expression": "metabolic imprinting, maternal diabetes, increase the risk of, before birth"
+        },
+        {
+          "number": "05",
+          "title": "5. The Same Diet Does Not Fit Everyone",
+          "en": "A study comparing low-fat and low-glycemic-load diets found that insulin response affected outcomes. High insulin secretors performed best on the low-glycemic-load diet, supporting a personalized approach.",
+          "zh": "一项比较低脂和低升糖负荷饮食的研究发现，胰岛素反应会影响结果。高胰岛素分泌者在低升糖负荷饮食中表现最好，说明方案需要因人而异。",
+          "expression": "fare better, gain weight back, low-glycemic-load diet, an individualized approach"
+        },
+        {
+          "number": "06",
+          "title": "6. Could A Virus Contribute To Obesity?",
+          "en": "Dhurandhar's experiments suggest that some viruses may trigger fat accumulation. By identifying a gene necessary for AD-36-related obesity, researchers opened the possibility of an obesity vaccine.",
+          "zh": "Dhurandhar 的实验表明某些病毒可能促使脂肪积累。研究者识别出与 AD-36 肥胖相关的关键基因，也提出了肥胖疫苗的可能性。",
+          "expression": "Scientific evidence can challenge moral assumptions by revealing biological causes behind behaviour and health outcomes."
+        }
+      ],
+      "vocab": [
+        "be predisposed to",
+        "keep the weight off",
+        "chronic hunger",
+        "budge the needle",
+        "metabolic imprinting",
+        "low-glycemic-load diet",
+        "fare better",
+        "gain weight back",
+        "be attributable to",
+        "trigger obesity"
+      ],
+      "sentences": [
+        "Although diet and exercise remain important, the passage suggests that genes, hormones, metabolism, prenatal conditions and infection may all influence a person's ability to lose weight.",
+        "When obese people lose weight, their leptin levels fall along with their metabolism, which makes the body more efficient at conserving fat and maintaining hunger.",
+        "The study found that participants who secreted high levels of insulin achieved the best result when they followed a low-glycemic-load diet."
+      ],
+      "prompts": [
+        "Why is willpower an incomplete explanation for obesity?",
+        "Should public-health advice be personalized according to biology?",
+        "Is health a better goal than thinness when people try to lose weight?",
+        "How can science reduce stigma around obesity?"
+      ],
+      "updatedAt": "2026-09-20T07:54:11.321Z",
+      "speakingSessions": []
+    },
+    {
+      "id": "a54b92413456",
+      "title": "SOSUS Listening to the Ocean",
+      "source": "IELTS Fever",
+      "priority": "A 精读",
+      "tag": "Ocean acoustics and scientific discovery",
+      "image": "./assets/cloud-ai.png",
+      "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-1",
+      "status": "complete",
+      "summary": "The passage explains how underwater acoustics made the deep ocean observable. It moves from early discoveries about sound propagation to the military SOSUS network, then shows how the same system was repurposed to track whales, measure ocean temperature, and monitor rainfall and climate. 文章讲述水声学如何让深海变得可观测：从早期声传播研究，到军事用途的 SOSUS 水下监听系统，再到鲸类追踪、海温测量与气候监测。核心是“基础科学和军事技术如何产生更广泛的公共价值”。",
+      "bilingual": "### 1. The Limits Of Light\n\n**EN:** Oceans cover most of Earth, but their depths were historically harder to study than the Moon. Optical instruments can examine distant objects, whereas light cannot penetrate far through seawater.\n\n**中:** 海洋覆盖地球大部分表面，却曾比月球更难研究。原因并非距离，而是光学仪器在海水中失效。\n\n**可摘表达:** be accessible to study, penetrate seawater, an analogous instrument\n\n### 2. Sound As An Observational Tool\n\n**EN:** From Leonardo da Vinci to Colladon and Sturm, investigators established that water is an excellent medium for sound. Their measurements showed that sound travels almost five times faster in water than in air.\n\n**中:** 从达·芬奇到 Colladon 和 Sturm，研究者证明水是优良的声音传播介质，水下声速接近空气中的五倍。\n\n**可摘表达:** sound propagation, with remarkable accuracy, an excellent medium for sound\n\n### 3. Why Some Sounds Travel Farther\n\n**EN:** Absorption, reflection, scattering, salinity, temperature, and pressure all influence underwater sound. Low-frequency waves travel farther, while ocean layers bend sound and create a deep sound channel.\n\n**中:** 吸收、反射、散射、盐度、温度和压力都会影响水下声音。低频波传播更远，海洋分层还会形成深海声道。\n\n**IELTS 句型:** Because low-frequency waves lose less energy through absorption and scattering, they can travel over much greater distances.\n\n### 4. From Warfare To Whale Research\n\n**EN:** The U.S. Navy built SOSUS to detect submarines using arrays of hydrophones. Scientists later realized that its vast reach could also track many whales simultaneously and distinguish regional or seasonal calls.\n\n**中:** 美国海军最初利用水听器阵列建立 SOSUS 侦测潜艇。后来科学家发现，它也能同时追踪大量鲸类，并识别不同地区和季节的鲸歌。\n\n**可摘表达:** appreciate the usefulness of, distinguish between, track in real time, simultaneously\n\n### 5. Measuring Climate Through Sound\n\n**EN:** Because sound speed depends strongly on water temperature, travel time can indicate average temperature across huge ocean areas. Hydrophones can also classify rainfall, turning underwater sound into climate data.\n\n**中:** 声速与水温密切相关，因此传播时间可以反映大片海域的平均温度。水听器还能识别降雨类型，把声音转化为气候数据。\n\n**可摘表达:** on a global scale, a sensitive indicator of, piece together, monitor changing patterns\n\n### 6. Reading Takeaway\n\n**EN:** SOSUS shows how technology can outgrow its original purpose. A secret military network became a scientific instrument for understanding marine life, weather, and climate change.\n\n**中:** SOSUS 说明技术可以超越最初用途：秘密军事网络后来成为研究海洋生物、天气与气候变化的科学工具。\n\n**IELTS 句型:** Technology developed for one purpose can generate unexpected social and scientific benefits when it is adapted responsibly.",
+      "readingSections": [
+        {
+          "number": "01",
+          "title": "1. The Limits Of Light",
+          "en": "Oceans cover most of Earth, but their depths were historically harder to study than the Moon. Optical instruments can examine distant objects, whereas light cannot penetrate far through seawater.",
+          "zh": "海洋覆盖地球大部分表面，却曾比月球更难研究。原因并非距离，而是光学仪器在海水中失效。",
+          "expression": "be accessible to study, penetrate seawater, an analogous instrument"
+        },
+        {
+          "number": "02",
+          "title": "2. Sound As An Observational Tool",
+          "en": "From Leonardo da Vinci to Colladon and Sturm, investigators established that water is an excellent medium for sound. Their measurements showed that sound travels almost five times faster in water than in air.",
+          "zh": "从达·芬奇到 Colladon 和 Sturm，研究者证明水是优良的声音传播介质，水下声速接近空气中的五倍。",
+          "expression": "sound propagation, with remarkable accuracy, an excellent medium for sound"
+        },
+        {
+          "number": "03",
+          "title": "3. Why Some Sounds Travel Farther",
+          "en": "Absorption, reflection, scattering, salinity, temperature, and pressure all influence underwater sound. Low-frequency waves travel farther, while ocean layers bend sound and create a deep sound channel.",
+          "zh": "吸收、反射、散射、盐度、温度和压力都会影响水下声音。低频波传播更远，海洋分层还会形成深海声道。",
+          "expression": "Because low-frequency waves lose less energy through absorption and scattering, they can travel over much greater distances."
+        },
+        {
+          "number": "04",
+          "title": "4. From Warfare To Whale Research",
+          "en": "The U.S. Navy built SOSUS to detect submarines using arrays of hydrophones. Scientists later realized that its vast reach could also track many whales simultaneously and distinguish regional or seasonal calls.",
+          "zh": "美国海军最初利用水听器阵列建立 SOSUS 侦测潜艇。后来科学家发现，它也能同时追踪大量鲸类，并识别不同地区和季节的鲸歌。",
+          "expression": "appreciate the usefulness of, distinguish between, track in real time, simultaneously"
+        },
+        {
+          "number": "05",
+          "title": "5. Measuring Climate Through Sound",
+          "en": "Because sound speed depends strongly on water temperature, travel time can indicate average temperature across huge ocean areas. Hydrophones can also classify rainfall, turning underwater sound into climate data.",
+          "zh": "声速与水温密切相关，因此传播时间可以反映大片海域的平均温度。水听器还能识别降雨类型，把声音转化为气候数据。",
+          "expression": "on a global scale, a sensitive indicator of, piece together, monitor changing patterns"
+        },
+        {
+          "number": "06",
+          "title": "6. Reading Takeaway",
+          "en": "SOSUS shows how technology can outgrow its original purpose. A secret military network became a scientific instrument for understanding marine life, weather, and climate change.",
+          "zh": "SOSUS 说明技术可以超越最初用途：秘密军事网络后来成为研究海洋生物、天气与气候变化的科学工具。",
+          "expression": "Technology developed for one purpose can generate unexpected social and scientific benefits when it is adapted responsibly."
+        }
+      ],
+      "vocab": [
+        "penetrate seawater",
+        "sound propagation",
+        "low-frequency sound",
+        "deep sound channel",
+        "arrays of hydrophones",
+        "track in real time",
+        "distinguish whale calls",
+        "on a global scale",
+        "a sensitive indicator of",
+        "piece together"
+      ],
+      "sentences": [
+        "Although the Moon is far more distant than the ocean floor, it was historically easier to study because optical instruments could reveal its surface, whereas light cannot penetrate very far through seawater.",
+        "Researchers discovered that low-frequency sounds, whose long wavelengths pass over tiny particles, tend to travel farther without significant loss through absorption or scattering.",
+        "By repeating measurements along the same sound paths over time, scientists can track changes in ocean temperature across months or years."
+      ],
+      "prompts": [
+        "Why was the ocean historically harder to study than the Moon?",
+        "How did SOSUS change from a military system into a scientific tool?",
+        "Should military technology be shared more widely for environmental research?",
+        "How can sound help scientists understand climate change?"
+      ],
+      "updatedAt": "2026-09-20T07:52:42.420Z",
+      "speakingSessions": []
+    },
+    {
       "id": "1566bbf096eb",
       "title": "TechRadar - Cloud Spending Soars As Hyperscalers Up AI Investment",
       "source": "TechRadar",
@@ -151,5 +396,5 @@
       "speakingSessions": []
     }
   ],
-  "exportedAt": "2026-09-03T11:31:10.973Z"
+  "exportedAt": "2026-09-21T08:31:10.253Z"
 }
