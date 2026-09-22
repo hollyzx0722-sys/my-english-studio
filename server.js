@@ -48,7 +48,10 @@ function parseMarkdown(filePath) {
   const url = field(frontmatter, 'url') || field(frontmatter, 'source');
   const isStudyNote = field(frontmatter, 'type') === '外刊精读单篇';
   const vocabSection = section(body, 'Vocabulary And Chunks');
-  const vocab = [...vocabSection.matchAll(/^\|\s*([^|]+?)\s*\|/gm)].map((item) => item[1].trim()).filter((item) => item && !/^[-]+$/.test(item) && item.toLowerCase() !== 'english');
+  const vocabEntries = [...vocabSection.matchAll(/^\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|/gm)]
+    .map((item) => ({ term: item[1].trim(), meaning: item[2].trim(), use: item[3].trim() }))
+    .filter((item) => item.term && !/^[-]+$/.test(item.term) && item.term.toLowerCase() !== 'english');
+  const vocab = vocabEntries.map((item) => item.term);
   const summary = isStudyNote
     ? plain(section(body, 'One-Minute Summary')).split(/\n+/).filter(Boolean).slice(0, 2).join(' ')
     : plain(body.split(/\n\s*\n/).find((block) => block.trim() && !block.trim().startsWith('---')) || body).slice(0, 240);
@@ -67,7 +70,7 @@ function parseMarkdown(filePath) {
     tag: listField(frontmatter, 'topic')[0] || 'New clipping',
     image: './assets/cloud-ai.png', url, status: isStudyNote ? 'complete' : 'inbox',
     summary: summary || '从 Obsidian 同步的学习材料。', bilingual: bilingual || `原始剪藏已同步。\n\n文件：${relative}`, readingSections: reading,
-    vocab, sentences, prompts: prompts.length ? prompts : ['Summarize the article in your own words.', 'What is your opinion on this topic?'],
+    vocab, vocabEntries, sentences, prompts: prompts.length ? prompts : ['Summarize the article in your own words.', 'What is your opinion on this topic?'],
     sourcePath: relative, updatedAt: fs.statSync(filePath).mtime.toISOString(), kind: isStudyNote ? 'study-note' : 'clipping', isArticle
   };
 }
