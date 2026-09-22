@@ -69,6 +69,68 @@
         "decision fatigue",
         "restrict one's options"
       ],
+      "vocabEntries": [
+        {
+          "term": "enhance our lives",
+          "meaning": "改善我们的生活",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "a maximizer",
+          "meaning": "追求最佳选择的人",
+          "use": "speaking"
+        },
+        {
+          "term": "a satisficer",
+          "meaning": "接受足够好选项的人",
+          "use": "speaking"
+        },
+        {
+          "term": "settle for",
+          "meaning": "接受并非最优但足够好的选择",
+          "use": "speaking"
+        },
+        {
+          "term": "meet one's standards",
+          "meaning": "达到某人的标准",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "be prone to regret",
+          "meaning": "容易后悔",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "opportunity cost",
+          "meaning": "机会成本",
+          "use": "writing"
+        },
+        {
+          "term": "derive satisfaction from",
+          "meaning": "从……获得满足",
+          "use": "writing"
+        },
+        {
+          "term": "incur a cost",
+          "meaning": "承担成本",
+          "use": "writing"
+        },
+        {
+          "term": "sunk cost",
+          "meaning": "沉没成本",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "decision fatigue",
+          "meaning": "决策疲劳",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "restrict one's options",
+          "meaning": "限制选择范围",
+          "use": "speaking, writing"
+        }
+      ],
       "sentences": [
         "Although some choice is undoubtedly better than none, research suggests that expanding the number of alternatives can make people less satisfied with the decision they eventually make.",
         "If opportunity costs reduce the desirability of a preferred choice, then the more alternatives there are, the deeper the sense of loss becomes.",
@@ -149,6 +211,58 @@
         "gain weight back",
         "be attributable to",
         "trigger obesity"
+      ],
+      "vocabEntries": [
+        {
+          "term": "be predisposed to",
+          "meaning": "天生易于；有遗传倾向",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "keep the weight off",
+          "meaning": "防止减掉的体重反弹",
+          "use": "speaking"
+        },
+        {
+          "term": "chronic hunger",
+          "meaning": "长期饥饿感",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "budge the needle",
+          "meaning": "产生明显改变",
+          "use": "speaking"
+        },
+        {
+          "term": "metabolic imprinting",
+          "meaning": "代谢印记",
+          "use": "writing"
+        },
+        {
+          "term": "low-glycemic-load diet",
+          "meaning": "低升糖负荷饮食",
+          "use": "writing"
+        },
+        {
+          "term": "fare better",
+          "meaning": "表现更好",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "gain weight back",
+          "meaning": "体重反弹",
+          "use": "speaking"
+        },
+        {
+          "term": "be attributable to",
+          "meaning": "可归因于",
+          "use": "writing"
+        },
+        {
+          "term": "trigger obesity",
+          "meaning": "引发肥胖",
+          "use": "writing"
+        }
       ],
       "sentences": [
         "Although diet and exercise remain important, the passage suggests that genes, hormones, metabolism, prenatal conditions and infection may all influence a person's ability to lose weight.",
@@ -231,6 +345,58 @@
         "a sensitive indicator of",
         "piece together"
       ],
+      "vocabEntries": [
+        {
+          "term": "penetrate seawater",
+          "meaning": "穿透海水",
+          "use": "writing"
+        },
+        {
+          "term": "sound propagation",
+          "meaning": "声音传播",
+          "use": "writing"
+        },
+        {
+          "term": "low-frequency sound",
+          "meaning": "低频声音",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "deep sound channel",
+          "meaning": "深海声道",
+          "use": "writing"
+        },
+        {
+          "term": "arrays of hydrophones",
+          "meaning": "水听器阵列",
+          "use": "writing"
+        },
+        {
+          "term": "track in real time",
+          "meaning": "实时追踪",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "distinguish whale calls",
+          "meaning": "区分鲸类叫声",
+          "use": "speaking"
+        },
+        {
+          "term": "on a global scale",
+          "meaning": "在全球范围内",
+          "use": "speaking, writing"
+        },
+        {
+          "term": "a sensitive indicator of",
+          "meaning": "……的敏感指标",
+          "use": "writing"
+        },
+        {
+          "term": "piece together",
+          "meaning": "拼合并形成完整图景",
+          "use": "speaking, writing"
+        }
+      ],
       "sentences": [
         "Although the Moon is far more distant than the ocean floor, it was historically easier to study because optical instruments could reveal its surface, whereas light cannot penetrate very far through seawater.",
         "Researchers discovered that low-frequency sounds, whose long wavelengths pass over tiny particles, tend to travel farther without significant loss through absorption or scattering.",
@@ -307,6 +473,33 @@
         "landmark high",
         "AI investment"
       ],
+      "vocabEntries": [
+        {
+          "term": "cloud spending soars",
+          "meaning": "云支出飙升",
+          "use": "Spending on X has soared as Y becomes more widely adopted."
+        },
+        {
+          "term": "hyperscalers",
+          "meaning": "超大规模云服务商",
+          "use": "useful topic word for cloud platforms"
+        },
+        {
+          "term": "ramp up investment",
+          "meaning": "加大投资",
+          "use": "Governments and companies may ramp up investment in digital infrastructure."
+        },
+        {
+          "term": "landmark high",
+          "meaning": "里程碑式高点",
+          "use": "describe a record or symbolic high point"
+        },
+        {
+          "term": "AI investment",
+          "meaning": "AI 投资",
+          "use": "broad topic phrase for technology and economy essays"
+        }
+      ],
       "sentences": [
         "As demand for AI services grows, cloud providers are likely to ramp up investment in infrastructure, even though this may increase pressure on energy use and operating costs.",
         "Main clause: cloud providers are likely to ramp up investment",
@@ -382,6 +575,33 @@
         "in an AI push",
         "cloud products"
       ],
+      "vocabEntries": [
+        {
+          "term": "slash prices",
+          "meaning": "大幅降价",
+          "use": "Companies may slash prices to attract new customers."
+        },
+        {
+          "term": "price cuts",
+          "meaning": "降价措施",
+          "use": "Price cuts can make advanced technology more accessible."
+        },
+        {
+          "term": "international customers",
+          "meaning": "国际客户",
+          "use": "useful for globalization and business topics"
+        },
+        {
+          "term": "in an AI push",
+          "meaning": "为推进 AI 布局",
+          "use": "Company X did Y in an AI push."
+        },
+        {
+          "term": "cloud products",
+          "meaning": "云产品",
+          "use": "topic phrase for cloud computing"
+        }
+      ],
       "sentences": [
         "By cutting prices for international customers, Alibaba Cloud may make its services more attractive to AI developers while putting pressure on competitors to respond.",
         "Main clause: Alibaba Cloud may make its services more attractive",
@@ -396,5 +616,5 @@
       "speakingSessions": []
     }
   ],
-  "exportedAt": "2026-09-22T09:37:34.885Z"
+  "exportedAt": "2026-09-22T10:14:24.131Z"
 }
