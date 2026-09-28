@@ -25,6 +25,11 @@ const detailSummary = document.querySelector('#detailSummary');
 const detailImage = document.querySelector('#detailImage');
 const detailMeta = document.querySelector('#detailMeta');
 const detailSections = document.querySelector('#detailSections');
+const detailAudioWrap = document.querySelector('#detailAudioWrap');
+const detailAudio = document.querySelector('#detailAudio');
+const detailAudioVoice = document.querySelector('#detailAudioVoice');
+const detailOriginalBlock = document.querySelector('#detailOriginalBlock');
+const detailOriginal = document.querySelector('#detailOriginal');
 const detailVocab = document.querySelector('#detailVocab');
 const detailSentences = document.querySelector('#detailSentences');
 const detailPrompts = document.querySelector('#detailPrompts');
@@ -96,6 +101,22 @@ function openDetail(article) {
   detailTitle.textContent = article.title; detailSummary.innerHTML = summaryHtml(article);
   detailImage.src = article.image; detailImage.alt = article.title;
   detailMeta.innerHTML = `<span class="pill ${mode === 'deep' ? 'gold' : 'green'}">${studyModeLabel(mode)}</span><span class="pill">${escapeHtml(article.source)}</span><span class="pill">${statusLabel(article.status)}</span>`;
+  if (article.audio) {
+    detailAudio.src = article.audio;
+    detailAudioVoice.textContent = article.audioVoice ? `${article.audioVoice.replace(/^en-US-/, '').replace(/Neural$/, '')} · US voice` : 'US voice';
+    detailAudioWrap.hidden = false;
+  } else {
+    detailAudio.removeAttribute('src'); detailAudio.load();
+    detailAudioWrap.hidden = true;
+  }
+  if (article.originalText) {
+    detailOriginal.innerHTML = escapeHtml(article.originalText)
+      .split(/\n{2,}/).map((para) => `<p>${para.replace(/\n/g, '<br>')}</p>`).join('');
+    detailOriginalBlock.hidden = false;
+  } else {
+    detailOriginal.innerHTML = '';
+    detailOriginalBlock.hidden = true;
+  }
   const sections = article.readingSections?.length ? article.readingSections : [{ number: '01', title: 'Reading takeaway', en: article.bilingual || article.summary, zh: '这篇材料已经同步，结构化精读内容将在笔记生成后显示。', expression: '' }];
   const displaySections = mode === 'extensive' ? sections.slice(0, 3) : sections;
   const vocabEntries = article.vocabEntries?.length ? article.vocabEntries : (article.vocab || []).map((term) => ({ term, meaning: '' }));
@@ -142,7 +163,7 @@ function renderVocabulary(filter = 'all') {
   document.querySelectorAll('[data-vocab-filter]').forEach((button) => button.classList.toggle('active', button.dataset.vocabFilter === filter));
   document.querySelector('#vocabContent').innerHTML = visibleGroups.map((group) => `<section class="vocab-group"><div class="vocab-group-head"><div><span class="eyebrow">Level 1</span><h4>${group.title}</h4></div><span class="muted">${group.subtitle}</span></div><div class="vocab-grid">${group.items.length ? group.items.map((item) => `<article class="vocab-item"><div class="vocab-item-top"><div class="vocab-term"><h5>${escapeHtml(item.term)}</h5><button type="button" class="vocab-speak" data-speak="${encodeURIComponent(item.term)}" aria-label="朗读 ${escapeHtml(item.term)}">朗读</button></div>${item.practiceCount ? '<span class="practice-mark">口语用过</span>' : ''}</div><p>${escapeHtml(item.meaning)}</p><div class="vocab-tags">${item.levels.map((level) => `<span class="pill">${escapeHtml(level)}</span>`).join('')}</div><small>${escapeHtml(item.sources.join(' · '))}</small></article>`).join('') : '<div class="empty-state">这个分类暂时没有词汇。</div>'}</div></section>`).join('');
 }
-function closeModal(target) { target.classList.add('hidden'); target.setAttribute('aria-hidden', 'true'); }
+function closeModal(target) { if (target === modal && detailAudio) detailAudio.pause(); target.classList.add('hidden'); target.setAttribute('aria-hidden', 'true'); }
 
 function buildSpeakingPrompt(article) {
   const questions = article.prompts.map((item, index) => `${index + 1}. ${item}`).join('\n');

@@ -411,6 +411,20 @@ button { font: inherit; cursor: pointer; }
   background: rgba(244,241,236,.78);
 }
 .reading-detail { grid-column: 1 / -1; background: #f7f4ef; }
+.detail-audio {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  margin-top: 18px; padding: 14px 18px;
+  border-radius: 18px; border: 1px solid var(--line);
+  background: rgba(244,241,236,.9);
+}
+.detail-audio-label { display: flex; flex-direction: column; gap: 2px; }
+.detail-audio-voice { font-size: 13px; color: var(--muted); }
+.detail-audio audio { flex: 1; min-width: 240px; height: 40px; }
+.detail-original { grid-column: 1 / -1; background: #f7f4ef; }
+.original-text { display: grid; gap: 12px; max-height: 340px; overflow-y: auto; padding-right: 6px; }
+.original-text p { margin: 0; line-height: 1.75; color: var(--text); }
+.original-text::-webkit-scrollbar { width: 8px; }
+.original-text::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
 .detail-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
 .detail-heading h4 { margin: 5px 0 0; font-size: 23px; }
 .reading-sections { display: grid; gap: 12px; }

@@ -203,7 +203,15 @@
             <p id="detailSummary"></p>
           </div>
         </div>
+        <div class="detail-audio" id="detailAudioWrap" hidden>
+          <div class="detail-audio-label"><span class="eyebrow">Listen</span><span class="detail-audio-voice" id="detailAudioVoice"></span></div>
+          <audio id="detailAudio" controls preload="none"></audio>
+        </div>
         <div class="modal-grid">
+          <div class="detail-block detail-original" id="detailOriginalBlock" hidden>
+            <div class="detail-heading"><span class="eyebrow">Original article</span><h4>原文 Original text</h4></div>
+            <div id="detailOriginal" class="original-text"></div>
+          </div>
           <div class="detail-block reading-detail">
             <div class="detail-heading"><span class="eyebrow" id="detailModeLabel">Deep reading dossier</span><h4 id="detailReadingTitle">全文脉络 · English / 中文</h4></div>
             <div id="detailSections" class="reading-sections"></div>
