@@ -315,6 +315,7 @@ button { font: inherit; cursor: pointer; }
 }
 .seed strong { display: block; margin-bottom: 6px; }
 .seed span, .sentence-list p { color: var(--muted); font-size: 13px; font-style: normal; }
+.speaking-intro { max-width: 720px; margin: 8px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
 
 .feed {
   display: grid;

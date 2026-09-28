@@ -63,7 +63,7 @@ function parseMarkdown(filePath) {
     .filter((item) => item.term && !/^[-]+$/.test(item.term) && item.term.toLowerCase() !== 'english');
   const vocab = vocabEntries.map((item) => item.term);
   const summarySection = isStudyNote ? section(body, 'One-Minute Summary') : '';
-  const summaryEn = labeledSummary(summarySection, 'English Takeaway');
+  const summaryEn = labeledSummary(summarySection, 'English Summary') || labeledSummary(summarySection, 'English Takeaway');
   const summaryZh = labeledSummary(summarySection, '中文导读') || labeledSummary(summarySection, '核心洞察');
   const ieltsAngle = labeledSummary(summarySection, 'IELTS Angle') || labeledSummary(summarySection, 'IELTS 迁移') || labeledSummary(summarySection, '与主线的关系');
   const summary = isStudyNote

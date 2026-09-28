@@ -10,10 +10,10 @@
       "image": "./assets/cloud-ai.png",
       "url": "https://www.investopedia.com/alibaba-slashes-prices-for-cloud-products-to-international-customers-in-ai-push-8628371",
       "status": "complete",
-      "summary": "Alibaba Cloud is using lower prices as a route into overseas markets. The strategy may reduce the cost of adopting AI services and attract developers, but it can also squeeze margins and pressure competitors to respond with discounts of their own.",
-      "summaryEn": "Alibaba Cloud is using lower prices as a route into overseas markets. The strategy may reduce the cost of adopting AI services and attract developers, but it can also squeeze margins and pressure competitors to respond with discounts of their own.",
-      "summaryZh": "这次降价不只是促销，而是用价格换取海外市场入口：先降低 AI 云服务的采用门槛，再争夺开发者与长期客户。",
-      "ieltsAngle": "This article complements the TechRadar anchor: one explains why hyperscalers expand capacity, while the other shows how that capacity can be converted into market share through pricing.",
+      "summary": "Alibaba Cloud cut prices for international customers as part of its broader AI push. The move is designed to make its services more attractive overseas, lower the cost of adopting AI tools, and compete for developers and long-term customers in an increasingly crowded cloud market.",
+      "summaryEn": "Alibaba Cloud cut prices for international customers as part of its broader AI push. The move is designed to make its services more attractive overseas, lower the cost of adopting AI tools, and compete for developers and long-term customers in an increasingly crowded cloud market.",
+      "summaryZh": "这波降价不只是做促销，更像是在用价格换海外市场。先把 AI 云服务的门槛打下来，吸引开发者和企业入场，再争取把短期流量变成长期客户。",
+      "ieltsAngle": "",
       "bilingual": "> 注：这里做的是全文脉络覆盖的学习摘录，不逐字转载全文；英文为原文信息的 paraphrase 和少量短语摘录，中文为学习向解释。\n\n### 1. Lead / Company Move\n\n**EN:** Alibaba Cloud cut prices for cloud products offered to international customers, presenting the move as part of a broader push into artificial intelligence services.\n\n**中:** 开头是典型商业新闻句式：公司 + 动作 + 对象 + 战略目的。这里的动作是 cut/slash prices，对象是 international customers，目的跟 AI push 有关。\n\n**可摘表达:** `slash prices`, `cloud products`, `international customers`, `in an AI push`\n\n### 2. Strategic Purpose\n\n**EN:** The price reductions are designed to make Alibaba's cloud services more attractive outside China, especially as demand for AI-related computing grows.\n\n**中:** 这一段解释“为什么降价”：不是单纯促销，而是为了提高海外市场吸引力，并借 AI 需求扩大客户基础。可用于 globalization 和 market expansion 话题。\n\n**IELTS 句型:** Lower prices can make advanced digital services more accessible to overseas customers.\n\n### 3. Market Competition\n\n**EN:** The article places Alibaba's move within a competitive cloud market where providers compete on price, performance, and AI capabilities.\n\n**中:** 这里把单家公司动作放入行业竞争背景：云服务商不仅比技术，也比价格、性能和 AI 能力。适合用来说明 market competition can benefit consumers, but it may pressure companies' profit margins。\n\n**可摘表达:** `competitive cloud market`, `compete on price`, `AI capabilities`\n\n### 4. International Expansion\n\n**EN:** By targeting international customers, Alibaba Cloud is trying to strengthen its presence beyond its domestic market and appeal to businesses that need affordable cloud infrastructure.\n\n**中:** 这一段的核心是 overseas expansion。对 IELTS 来说，可以连接“企业全球化”“数字基础设施普及”“发展中国家/中小企业获得技术资源”等论点。\n\n**IELTS 句型:** By lowering the cost of cloud services, technology firms may help smaller businesses access tools that were previously too expensive.\n\n### 5. Business Trade-Off\n\n**EN:** Price cuts may attract new customers and support AI adoption, but they can also reduce margins and force competitors to respond with their own discounts.\n\n**中:** 这就是商业新闻里最常见的利弊结构：降价能拉新，但会压缩利润，也可能引发价格战。写作时可以用 may..., but... 来保持论证平衡。\n\n**可摘表达:** `attract new customers`, `support AI adoption`, `reduce margins`, `force competitors to respond`\n\n### 6. Reading Takeaway\n\n**EN:** The article shows that the AI race is not only about advanced models. It also depends on cloud pricing, international access, and whether companies can make computing resources affordable at scale.\n\n**中:** 最值得带走的观点：AI 普及不只是技术问题，也是价格和可及性问题。云服务降价可能降低 AI 创业和企业数字化门槛。",
       "readingSections": [
         {
@@ -88,7 +88,7 @@
         "How can cheaper cloud services affect AI startups?",
         "Is price competition always good for consumers?"
       ],
-      "updatedAt": "2026-09-28T08:26:23.593Z",
+      "updatedAt": "2026-09-28T08:36:23.454Z",
       "speakingSessions": []
     },
     {
@@ -101,10 +101,10 @@
       "image": "./assets/cloud-ai.png",
       "url": "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026",
       "status": "complete",
-      "summary": "The AI race is also an infrastructure race. Rising demand is pushing hyperscalers to expand data centres, computing capacity, and cloud platforms, while the scale of that investment raises barriers to entry and makes capital strength increasingly difficult for smaller rivals to match.",
-      "summaryEn": "The AI race is also an infrastructure race. Rising demand is pushing hyperscalers to expand data centres, computing capacity, and cloud platforms, while the scale of that investment raises barriers to entry and makes capital strength increasingly difficult for smaller rivals to match.",
-      "summaryZh": "模型竞争只是表层；决定企业能否扩大 AI 服务的深层约束，是算力、数据中心和云平台等资本密集型基础设施。",
-      "ieltsAngle": "Technological progress depends on long-term infrastructure investment, but the concentration of cloud resources may also weaken competition and widen digital inequality.",
+      "summary": "AI investment is driving a sharp rise in global cloud spending, particularly as hyperscalers expand data centres, computing capacity, and cloud platforms. The trend suggests that the AI race is not only about better models; it is also a capital-intensive contest over the infrastructure needed to run them at scale.",
+      "summaryEn": "AI investment is driving a sharp rise in global cloud spending, particularly as hyperscalers expand data centres, computing capacity, and cloud platforms. The trend suggests that the AI race is not only about better models; it is also a capital-intensive contest over the infrastructure needed to run them at scale.",
+      "summaryZh": "AI 大战表面上拼模型，底层其实也在拼“家底”。谁能持续砸钱建数据中心、扩算力、铺云平台，谁才更有机会把 AI 服务真正做大；这也意味着行业门槛会越来越高。",
+      "ieltsAngle": "",
       "bilingual": "> 注：这里做的是全文脉络覆盖的学习摘录，不逐字转载全文；英文为原文信息的 paraphrase 和少量短语摘录，中文为学习向解释。\n\n### 1. Lead / News Hook\n\n**EN:** Cloud spending ==is rising rapidly== as the largest cloud providers increase investment in artificial intelligence infrastructure. The article frames this as a market-wide acceleration rather than a single-company story.\n\n**中:** 开头把“云支出上涨”和“AI 基建投资”直接连起来。注意它不是在讲某一家公司的短期新闻，而是在讲整个云计算市场因为 AI 需求而进入加速期。\n\n**可摘表达:** `cloud spending`, `soars`, `hyperscalers`, `AI investment`\n\n### 2. Market Forecast\n\n**EN:** The article emphasizes that cloud **expenditure** could ==reach a significant new high== in 2026, supported by continued demand for **AI computing, storage**, and **enterprise cloud services**.\n\n**中:** 这一段的重点是 forecast language：文章用“可能达到新高”来表达趋势预测。IELTS Task 1 可以借用这种写法描述 spending, demand, revenue, investment 的上升趋势。\n\n**可摘表达:** `could reach a landmark high`, `continued demand`, `enterprise cloud services`\n\n### 3. Why AI Drives Cloud Spending\n\n**EN:** AI systems require large-scale computing power, data storage, networking capacity, and specialized infrastructure. As more businesses adopt AI tools, cloud providers need to expand capacity and improve performance.\n\n**中:** 这里是典型因果链：AI adoption -> computing demand -> infrastructure expansion -> higher cloud spending。写作文时可以把它变成“技术创新背后需要物理和资本基础设施”的论证。\n\n**IELTS 句型:** As more companies adopt AI-powered services, demand for computing infrastructure is likely to rise.\n\n### 4. Role Of Hyperscalers\n\n**EN:** Hyperscalers such as AWS, Microsoft Azure, and Google Cloud are positioned as the main players because they already operate massive data-center networks and can spend heavily on AI capacity.\n\n**中:** `hyperscalers` 是主题词，指超大规模云服务商。这里的逻辑是：AI 基建门槛高，所以大公司更有优势；这也可以引出平台垄断、市场集中度和中小企业依赖大平台的问题。\n\n**可摘表达:** `massive data-center networks`, `AI capacity`, `major cloud providers`\n\n### 5. Business Implication\n\n**EN:** Rising AI investment may strengthen the cloud businesses of large technology companies, but it also increases pressure to manage capital expenditure, operating costs, and energy demand.\n\n**中:** 这段可以练 concession：AI 投资带来增长机会，但也带来成本和能源压力。写 IELTS 时不要只写“AI 好”，要写 trade-off。\n\n**IELTS 句型:** While investment in AI infrastructure can support innovation, it may also increase pressure on energy supply and operating costs.\n\n### 6. Reading Takeaway\n\n**EN:** The article's deeper point is that AI competition is also infrastructure competition: the companies that control cloud capacity may shape how quickly and cheaply AI tools spread.\n\n**中:** 最值得带走的观点：AI 竞争不只是模型和算法竞争，也是算力、云平台、资金和能源的竞争。这能成为 Technology / Economy / Business 类题目的高质量素材。",
       "readingSections": [
         {
@@ -194,7 +194,7 @@
         "Why do hyperscalers benefit from rising AI demand?",
         "Could cloud concentration become a risk for smaller companies?"
       ],
-      "updatedAt": "2026-09-28T08:26:23.573Z",
+      "updatedAt": "2026-09-28T08:36:23.432Z",
       "speakingSessions": []
     },
     {
@@ -207,10 +207,10 @@
       "image": "./assets/cloud-ai.png",
       "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-1",
       "status": "complete",
-      "summary": "SOSUS did more than detect submarines: it turned the deep ocean into a system that could be observed continuously. Because low-frequency sound travels vast distances through the deep sound channel, a military listening network could later reveal whale movements, ocean-temperature changes, and rainfall patterns.",
-      "summaryEn": "SOSUS did more than detect submarines: it turned the deep ocean into a system that could be observed continuously. Because low-frequency sound travels vast distances through the deep sound channel, a military listening network could later reveal whale movements, ocean-temperature changes, and rainfall patterns.",
-      "summaryZh": "这套系统真正重要的地方，是把难以持续观察的深海转化为可长期读取的数据空间，并让军事基础设施获得了新的科研用途。",
-      "ieltsAngle": "SOSUS is a strong example of dual-use technology: military research can later become public scientific infrastructure, especially for long-term climate observation.",
+      "summary": "The passage explains how underwater acoustics made the deep ocean observable. It moves from early discoveries about sound propagation to the military SOSUS network, then shows how the same system was repurposed to track whales, measure ocean temperature, and monitor rainfall and climate.",
+      "summaryEn": "The passage explains how underwater acoustics made the deep ocean observable. It moves from early discoveries about sound propagation to the military SOSUS network, then shows how the same system was repurposed to track whales, measure ocean temperature, and monitor rainfall and climate.",
+      "summaryZh": "SOSUS 原本是冷战时期用来“听潜艇”的军事网络，后来却成了科学家读懂海洋的耳朵。它不仅能追踪鲸群，还能帮助研究海温、降雨和气候变化，是军用技术转向公共科研的典型案例。",
+      "ieltsAngle": "",
       "bilingual": "### 1. The Limits Of Light\n\n**EN:** Oceans cover most of Earth, but their depths were historically harder to study than the Moon. Optical instruments can examine distant objects, whereas light cannot penetrate far through seawater.\n\n**中:** 海洋覆盖地球大部分表面，却曾比月球更难研究。原因并非距离，而是光学仪器在海水中失效。\n\n**可摘表达:** be accessible to study, penetrate seawater, an analogous instrument\n\n### 2. Sound As An Observational Tool\n\n**EN:** From Leonardo da Vinci to Colladon and Sturm, investigators established that water is an excellent medium for sound. Their measurements showed that sound travels almost five times faster in water than in air.\n\n**中:** 从达·芬奇到 Colladon 和 Sturm，研究者证明水是优良的声音传播介质，水下声速接近空气中的五倍。\n\n**可摘表达:** sound propagation, with remarkable accuracy, an excellent medium for sound\n\n### 3. Why Some Sounds Travel Farther\n\n**EN:** Absorption, reflection, scattering, salinity, temperature, and pressure all influence underwater sound. Low-frequency waves travel farther, while ocean layers bend sound and create a deep sound channel.\n\n**中:** 吸收、反射、散射、盐度、温度和压力都会影响水下声音。低频波传播更远，海洋分层还会形成深海声道。\n\n**IELTS 句型:** Because low-frequency waves lose less energy through absorption and scattering, they can travel over much greater distances.\n\n### 4. From Warfare To Whale Research\n\n**EN:** The U.S. Navy built SOSUS to detect submarines using arrays of hydrophones. Scientists later realized that its vast reach could also track many whales simultaneously and distinguish regional or seasonal calls.\n\n**中:** 美国海军最初利用水听器阵列建立 SOSUS 侦测潜艇。后来科学家发现，它也能同时追踪大量鲸类，并识别不同地区和季节的鲸歌。\n\n**可摘表达:** appreciate the usefulness of, distinguish between, track in real time, simultaneously\n\n### 5. Measuring Climate Through Sound\n\n**EN:** Because sound speed depends strongly on water temperature, travel time can indicate average temperature across huge ocean areas. Hydrophones can also classify rainfall, turning underwater sound into climate data.\n\n**中:** 声速与水温密切相关，因此传播时间可以反映大片海域的平均温度。水听器还能识别降雨类型，把声音转化为气候数据。\n\n**可摘表达:** on a global scale, a sensitive indicator of, piece together, monitor changing patterns\n\n### 6. Reading Takeaway\n\n**EN:** SOSUS shows how technology can outgrow its original purpose. A secret military network became a scientific instrument for understanding marine life, weather, and climate change.\n\n**中:** SOSUS 说明技术可以超越最初用途：秘密军事网络后来成为研究海洋生物、天气与气候变化的科学工具。\n\n**IELTS 句型:** Technology developed for one purpose can generate unexpected social and scientific benefits when it is adapted responsibly.",
       "readingSections": [
         {
@@ -331,7 +331,7 @@
         "Should military technology be shared more widely for environmental research?",
         "How can sound help scientists understand climate change?"
       ],
-      "updatedAt": "2026-09-28T08:26:23.554Z",
+      "updatedAt": "2026-09-28T08:36:23.410Z",
       "speakingSessions": []
     },
     {
@@ -344,10 +344,10 @@
       "image": "./assets/cloud-ai.png",
       "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-2",
       "status": "complete",
-      "summary": "Difficulty losing weight is not simply evidence of weak willpower. Genes, leptin, metabolic adaptation, early-life conditions, and insulin response can alter hunger and energy use, so the same intervention may produce very different outcomes across individuals.",
-      "summaryEn": "Difficulty losing weight is not simply evidence of weak willpower. Genes, leptin, metabolic adaptation, early-life conditions, and insulin response can alter hunger and energy use, so the same intervention may produce very different outcomes across individuals.",
-      "summaryZh": "体重是生理机制、早期环境、饮食结构与行为共同作用的结果；把减重成败完全归因于自律，既失真，也容易制造羞耻。",
-      "ieltsAngle": "Discussions of obesity should move beyond personal responsibility and ask whether public-health interventions are evidence-based and responsive to individual variation.",
+      "summary": "The passage argues that body weight cannot be explained by willpower alone. Genes, leptin, metabolism, prenatal conditions, insulin response, diet type, and even viral infection may interact. Effective weight management therefore requires evidence-based and individualized solutions rather than moral judgement.",
+      "summaryEn": "The passage argues that body weight cannot be explained by willpower alone. Genes, leptin, metabolism, prenatal conditions, insulin response, diet type, and even viral infection may interact. Effective weight management therefore requires evidence-based and individualized solutions rather than moral judgement.",
+      "summaryZh": "减不下来不一定是“不够自律”。体重背后可能同时有基因、激素、代谢和早期环境在起作用，所以同一套减重方案并不适合所有人。真正有效的干预，应当少一些道德评判，多一些科学依据和个体化判断。",
+      "ieltsAngle": "",
       "bilingual": "### 1. Competing Explanations Of Obesity\n\n**EN:** Researchers from different disciplines offer apparently incompatible theories of obesity. The passage uses the fable of blind men and an elephant to show that each field may understand only part of a complex problem.\n\n**中:** 不同学科对肥胖给出看似冲突的解释。文章借“盲人摸象”说明每个领域可能只看到了复杂问题的一部分。\n\n**可摘表达:** bafflingly incompatible, attribute A to B, be predisposed to, a complex interaction\n\n### 2. Biology Resists Weight Loss\n\n**EN:** Leptin and metabolism help regulate body weight. After obese people lose weight, falling leptin levels and a slower metabolism can create chronic hunger and make long-term maintenance difficult.\n\n**中:** 瘦素和代谢参与调节体重。减重后瘦素水平和代谢下降，可能造成长期饥饿，使维持体重非常困难。\n\n**可摘表达:** plummet, conserve fat, keep the weight off, chronic hunger\n\n### 3. Health Matters More Than Appearance\n\n**EN:** Moderate exercise alone may not produce dramatic weight loss, but radical and sustainable lifestyle changes can help. The realistic goal should be improved health, not resemblance to an idealized body image.\n\n**中:** 温和运动未必带来显著减重，但持续的生活方式调整仍有价值。合理目标应是改善健康，而非追求理想化外形。\n\n**IELTS 句型:** The aim should not be to achieve an unrealistic appearance, but to reduce measurable health risks.\n\n### 4. Genes Meet The Prenatal Environment\n\n**EN:** Genetic predisposition interacts with conditions in the womb. Maternal diabetes and obesity may increase a child's later risk through metabolic imprinting, showing that weight regulation can begin before birth.\n\n**中:** 遗传倾向会与胎儿期环境互动。孕妇糖尿病和肥胖可能通过代谢印记增加孩子日后肥胖风险，说明体重调节可能在出生前就开始。\n\n**可摘表达:** metabolic imprinting, maternal diabetes, increase the risk of, before birth\n\n### 5. The Same Diet Does Not Fit Everyone\n\n**EN:** A study comparing low-fat and low-glycemic-load diets found that insulin response affected outcomes. High insulin secretors performed best on the low-glycemic-load diet, supporting a personalized approach.\n\n**中:** 一项比较低脂和低升糖负荷饮食的研究发现，胰岛素反应会影响结果。高胰岛素分泌者在低升糖负荷饮食中表现最好，说明方案需要因人而异。\n\n**可摘表达:** fare better, gain weight back, low-glycemic-load diet, an individualized approach\n\n### 6. Could A Virus Contribute To Obesity?\n\n**EN:** Dhurandhar's experiments suggest that some viruses may trigger fat accumulation. By identifying a gene necessary for AD-36-related obesity, researchers opened the possibility of an obesity vaccine.\n\n**中:** Dhurandhar 的实验表明某些病毒可能促使脂肪积累。研究者识别出与 AD-36 肥胖相关的关键基因，也提出了肥胖疫苗的可能性。\n\n**IELTS 句型:** Scientific evidence can challenge moral assumptions by revealing biological causes behind behaviour and health outcomes.",
       "readingSections": [
         {
@@ -468,7 +468,7 @@
         "Is health a better goal than thinness when people try to lose weight?",
         "How can science reduce stigma around obesity?"
       ],
-      "updatedAt": "2026-09-28T08:26:23.534Z",
+      "updatedAt": "2026-09-28T08:36:23.388Z",
       "speakingSessions": []
     },
     {
@@ -481,10 +481,10 @@
       "image": "./assets/cloud-ai.png",
       "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-3",
       "status": "complete",
-      "summary": "More choice can expand freedom, but it can also make satisfaction harder to reach. Maximizers keep comparing real decisions with imagined alternatives, whereas satisficers stop once an option is good enough; the extra search often turns freedom into opportunity costs, regret, and decision fatigue.",
-      "summaryEn": "More choice can expand freedom, but it can also make satisfaction harder to reach. Maximizers keep comparing real decisions with imagined alternatives, whereas satisficers stop once an option is good enough; the extra search often turns freedom into opportunity costs, regret, and decision fatigue.",
-      "summaryZh": "真正消耗人的并非选择本身，而是不断比较、想象被放弃的可能，以及决定后仍怀疑“是否还有更优解”。",
-      "ieltsAngle": "Choice may increase personal freedom while also raising its cognitive and emotional costs. This balanced claim works for consumer choice, decision fatigue, and well-being.",
+      "summary": "The passage challenges the belief that more choice always improves life. It contrasts maximizers, who search for the best possible option, with satisficers, who accept an option that is good enough. More alternatives increase comparison, opportunity costs, regret, and dissatisfaction, especially for maximizers.",
+      "summaryEn": "The passage challenges the belief that more choice always improves life. It contrasts maximizers, who search for the best possible option, with satisficers, who accept an option that is good enough. More alternatives increase comparison, opportunity costs, regret, and dissatisfaction, especially for maximizers.",
+      "summaryZh": "选择多，不代表幸福感就会同步上涨。总想找到“最优解”的人，很容易陷入反复比价、错失焦虑和事后后悔；懂得在“足够好”时收手的人，反而更轻松，也更容易对自己的决定满意。",
+      "ieltsAngle": "",
       "bilingual": "### 1. When More Is Not Better\n\n**EN:** Choice can enhance life, but research suggests that unlimited options may reduce psychological well-being. The assumption that more choice is always better fails to account for cognitive and emotional costs.\n\n**中:** 选择可以改善生活，但无限选项可能降低心理幸福感。“越多越好”的假设忽略了认知与情绪成本。\n\n**可摘表达:** enhance our lives, infinite options, strongly suggest, more is not always better than less\n\n### 2. Maximizers And Satisficers\n\n**EN:** Maximizers seek the best possible choice, whereas satisficers stop once an option meets their standards. The former compare more products, spend longer deciding, and continue evaluating after purchase.\n\n**中:** 最大化者寻找最佳选择，满足者在选项达到标准后停止。前者比较更多、决策更慢，购买后仍继续评估。\n\n**可摘表达:** aim for, settle for, meet one's standards, make purchasing decisions\n\n### 3. The Emotional Cost Of Maximizing\n\n**EN:** Maximizers gain little pleasure from outperforming others but feel substantial dissatisfaction when doing worse. They experience more regret, recover more slowly from disappointment, and ruminate more.\n\n**中:** 最大化者超过别人时获得的快乐有限，落后时却非常不满。他们更容易后悔，也更难从失望中恢复，并会反复纠结。\n\n**可摘表达:** be prone to, a sense of well-being, recover from, brood or ruminate\n\n### 4. Opportunity Costs Multiply\n\n**EN:** Every choice means giving up alternatives. Because people respond more strongly to losses than gains, a larger choice set creates more perceived losses and lowers satisfaction with the final decision.\n\n**中:** 每次选择都意味着放弃其他机会。由于人对损失比收益更敏感，选项越多，感知到的损失越多，对最终决定越不满意。\n\n**IELTS 句型:** The more alternatives people consider, the more opportunity costs they incur and the less satisfaction they may derive from their final choice.\n\n### 5. Regret And Sunk Costs\n\n**EN:** Fear of future regret pushes people to search for the perfect option. The theatre-ticket experiment also shows sunk-cost effects: people who paid full price attended more often because wasting an expensive ticket felt like a greater loss.\n\n**中:** 对未来后悔的担忧会推动人寻找完美选项。剧院票实验还展示沉没成本效应：全价购票者更常出席，因为浪费昂贵票券意味着更大损失。\n\n**可摘表达:** regret sensitivity, incur a cost, sunk costs, constitute a loss\n\n### 6. Restricting Choice Can Increase Happiness\n\n**EN:** Satisficing reduces search, comparison, and opportunity costs. For decisions that are not crucial, deliberately limiting options can protect time and well-being without sacrificing meaningful quality.\n\n**中:** “足够好”能减少搜索、比较与机会成本。对于不重要的决定，主动限制选项可以节省时间并保护幸福感，而不必牺牲真正重要的质量。\n\n**IELTS 句型:** Limiting minor choices can reduce decision fatigue and leave more attention for decisions that genuinely matter.",
       "readingSections": [
         {
@@ -617,9 +617,9 @@
         "How do opportunity costs affect important decisions?",
         "Which everyday choices would you deliberately limit to reduce decision fatigue?"
       ],
-      "updatedAt": "2026-09-28T08:26:23.510Z",
+      "updatedAt": "2026-09-28T08:36:23.363Z",
       "speakingSessions": []
     }
   ],
-  "exportedAt": "2026-09-28T08:26:44.049Z"
+  "exportedAt": "2026-09-28T08:36:30.378Z"
 }

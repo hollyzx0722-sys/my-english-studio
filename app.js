@@ -51,8 +51,7 @@ function studyModeLabel(mode) { return { deep: 'A · 深度精读', extensive: '
 function summaryHtml(article, compact = false) {
   const english = article.summaryEn || article.summary || '';
   const chinese = article.summaryZh || '';
-  const angle = compact ? '' : article.ieltsAngle || '';
-  return `<div class="article-summary"><p class="summary-en" lang="en">${escapeHtml(english)}</p>${chinese ? `<p class="summary-zh">${escapeHtml(chinese)}</p>` : ''}${angle ? `<p class="summary-angle"><strong>IELTS</strong>${escapeHtml(angle)}</p>` : ''}</div>`;
+  return `<div class="article-summary"><p class="summary-en" lang="en">${escapeHtml(english)}</p>${chinese ? `<p class="summary-zh">${escapeHtml(chinese)}</p>` : ''}</div>`;
 }
 function setActiveNav(section) { document.querySelectorAll('[data-nav]').forEach((item) => item.classList.toggle('active', item.dataset.nav === section)); }
 
