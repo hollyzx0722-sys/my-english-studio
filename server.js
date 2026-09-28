@@ -21,6 +21,10 @@ function section(body, heading) {
   return lines.slice(start + 1, end < 0 ? lines.length : end).join('\n').trim();
 }
 function plain(value) { return value.replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[*_`>#=]/g, '').replace(/^\s*[-+]\s*/gm, '').replace(/\s+/g, ' ').trim(); }
+function labeledSummary(content, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return plain(content.match(new RegExp(`(?:^|\n)\\s*[-+]?\\s*\\*\\*${escaped}:?\\*\\*\\s*([\\s\\S]*?)(?=\n\\s*[-+]?\\s*\\*\\*[^*]+:?\\*\\*|$)`, 'i'))?.[1] || '');
+}
 function field(frontmatter, key) {
   const match = frontmatter.match(new RegExp(`^${key}:\\s*(.+)$`, 'mi'));
   return match ? unquote(match[1]) : '';
@@ -58,8 +62,12 @@ function parseMarkdown(filePath) {
     .map((item) => ({ term: item[1].trim(), meaning: item[2].trim(), use: item[3].trim() }))
     .filter((item) => item.term && !/^[-]+$/.test(item.term) && item.term.toLowerCase() !== 'english');
   const vocab = vocabEntries.map((item) => item.term);
+  const summarySection = isStudyNote ? section(body, 'One-Minute Summary') : '';
+  const summaryEn = labeledSummary(summarySection, 'English Takeaway');
+  const summaryZh = labeledSummary(summarySection, '中文导读') || labeledSummary(summarySection, '核心洞察');
+  const ieltsAngle = labeledSummary(summarySection, 'IELTS Angle') || labeledSummary(summarySection, 'IELTS 迁移') || labeledSummary(summarySection, '与主线的关系');
   const summary = isStudyNote
-    ? plain(section(body, 'One-Minute Summary'))
+    ? (summaryEn || summaryZh || plain(summarySection))
     : plain(body.split(/\n\s*\n/).find((block) => block.trim() && !block.trim().startsWith('---')) || body).slice(0, 240);
   const bilingual = isStudyNote ? section(body, '全文级中英对照精读') : '';
   const reading = isStudyNote ? readingSections(bilingual) : [];
@@ -77,7 +85,7 @@ function parseMarkdown(filePath) {
     priority, studyMode: studyMode(frontmatter, priority, status),
     tag: listField(frontmatter, 'topic')[0] || 'New clipping',
     image: './assets/cloud-ai.png', url, status,
-    summary: summary || '从 Obsidian 同步的学习材料。', bilingual: bilingual || `原始剪藏已同步。\n\n文件：${relative}`, readingSections: reading,
+    summary: summary || '从 Obsidian 同步的学习材料。', summaryEn, summaryZh, ieltsAngle, bilingual: bilingual || `原始剪藏已同步。\n\n文件：${relative}`, readingSections: reading,
     vocab, vocabEntries, sentences, prompts: prompts.length ? prompts : ['Summarize the article in your own words.', 'What is your opinion on this topic?'],
     sourcePath: relative, updatedAt: fs.statSync(filePath).mtime.toISOString(), kind: isStudyNote ? 'study-note' : 'clipping', isArticle
   };

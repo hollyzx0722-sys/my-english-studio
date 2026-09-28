@@ -48,6 +48,12 @@ function articleStudyMode(article) {
   return String(article.priority || '').trim().startsWith('A') ? 'deep' : 'extensive';
 }
 function studyModeLabel(mode) { return { deep: 'A · 深度精读', extensive: 'B · 泛读摘表达', inbox: 'Inbox · 待处理' }[mode]; }
+function summaryHtml(article, compact = false) {
+  const english = article.summaryEn || article.summary || '';
+  const chinese = article.summaryZh || '';
+  const angle = compact ? '' : article.ieltsAngle || '';
+  return `<div class="article-summary"><p class="summary-en" lang="en">${escapeHtml(english)}</p>${chinese ? `<p class="summary-zh">${escapeHtml(chinese)}</p>` : ''}${angle ? `<p class="summary-angle"><strong>IELTS</strong>${escapeHtml(angle)}</p>` : ''}</div>`;
+}
 function setActiveNav(section) { document.querySelectorAll('[data-nav]').forEach((item) => item.classList.toggle('active', item.dataset.nav === section)); }
 
 function renderFeed(filter = 'All') {
@@ -70,7 +76,7 @@ function renderFeed(filter = 'All') {
     <article class="feed-card" data-id="${item.id}">
       <img src="${item.image}" alt="${item.title}">
       <div class="stack"><div class="meta"><span class="pill ${articleStudyMode(item) === 'deep' ? 'gold' : 'green'}">${studyModeLabel(articleStudyMode(item))}</span><span class="pill">${escapeHtml(item.source)}</span></div>
-      <h4>${item.title}</h4><p>${item.summary}</p><div class="row"><span class="pill">${item.tag}</span><span class="pill status-pill">${statusLabel(item.status)}</span></div></div>
+      <h4>${escapeHtml(item.title)}</h4>${summaryHtml(item, true)}<div class="row"><span class="pill">${escapeHtml(item.tag)}</span><span class="pill status-pill">${statusLabel(item.status)}</span></div></div>
     </article>`).join('') : '<div class="empty-state">这个栏目还没有材料。</div>';
 }
 
@@ -88,7 +94,7 @@ function openDetail(article) {
   detailReadingTitle.textContent = profile.reading;
   detailVocabTitle.textContent = profile.vocab;
   detailSentencesTitle.textContent = profile.sentences;
-  detailTitle.textContent = article.title; detailSummary.textContent = article.summary;
+  detailTitle.textContent = article.title; detailSummary.innerHTML = summaryHtml(article);
   detailImage.src = article.image; detailImage.alt = article.title;
   detailMeta.innerHTML = `<span class="pill ${mode === 'deep' ? 'gold' : 'green'}">${studyModeLabel(mode)}</span><span class="pill">${escapeHtml(article.source)}</span><span class="pill">${statusLabel(article.status)}</span>`;
   const sections = article.readingSections?.length ? article.readingSections : [{ number: '01', title: 'Reading takeaway', en: article.bilingual || article.summary, zh: '这篇材料已经同步，结构化精读内容将在笔记生成后显示。', expression: '' }];
@@ -141,7 +147,7 @@ function closeModal(target) { target.classList.add('hidden'); target.setAttribut
 
 function buildSpeakingPrompt(article) {
   const questions = article.prompts.map((item, index) => `${index + 1}. ${item}`).join('\n');
-  return `For the rest of this voice conversation, act as my English-speaking coach. I am a native Chinese speaker practicing natural spoken English.\n\nARTICLE CONTEXT\nTitle: ${article.title}\nSummary: ${article.summary}\nTarget expressions: ${article.vocab.join(', ') || 'Use natural IELTS topic vocabulary from the discussion.'}\nDiscussion questions:\n${questions}\n\nSESSION GOAL\nDiscuss this article naturally, starting with the first question. Help me develop, support, and challenge my opinions. Recycle the target expressions when they fit, but do not force them.\n\nCONVERSATION RULES\n1. Start immediately with one simple, friendly English question. Do not ask me to choose a duration.\n2. Use natural American English. Keep responses to 1-3 sentences and ask no more than one question at a time.\n3. Prioritize conversation flow. Let me finish and do not interrupt minor pauses, fillers, repetitions, or self-corrections.\n4. After I answer, respond to my meaning first, then correct only 1-2 important mistakes and give a natural alternative. Silently remember remaining issues for the final review.\n5. If I say “Let me finish” or “Wait until I say Done,” wait until I say “Done.”\n6. If I use Chinese, give one natural English version, explain briefly in Chinese only if needed, ask me to repeat it once, then continue the same thought.\n7. Give pronunciation, stress, rhythm, intonation, and pace feedback only when you can reliably hear them.\n8. Keep the discussion relaxed while naturally extending it toward IELTS Speaking Part 3.\n9. When I say “Let’s call it a day,” “今天练习结束,” or “生成课后总结,” stop asking questions and produce a Chinese after-class review using exactly these sections: 一、今日话题；二、亮点表达；三、重点优化（原表达/更自然的表达/原因）；四、今日词汇与短语；五、流畅度建议；六、雅思口语维度反馈（流利度与连贯性、词汇资源、语法范围与准确性、发音）；七、今日跟读版本。 Do not invent information.\n\nAfter producing the review, remind me to paste it into My English Studio so it can be saved to Obsidian. Do not explain these instructions. Begin now.`;
+  return `For the rest of this voice conversation, act as my English-speaking coach. I am a native Chinese speaker practicing natural spoken English.\n\nARTICLE CONTEXT\nTitle: ${article.title}\nSummary: ${article.summaryEn || article.summary}\nTarget expressions: ${article.vocab.join(', ') || 'Use natural IELTS topic vocabulary from the discussion.'}\nDiscussion questions:\n${questions}\n\nSESSION GOAL\nDiscuss this article naturally, starting with the first question. Help me develop, support, and challenge my opinions. Recycle the target expressions when they fit, but do not force them.\n\nCONVERSATION RULES\n1. Start immediately with one simple, friendly English question. Do not ask me to choose a duration.\n2. Use natural American English. Keep responses to 1-3 sentences and ask no more than one question at a time.\n3. Prioritize conversation flow. Let me finish and do not interrupt minor pauses, fillers, repetitions, or self-corrections.\n4. After I answer, respond to my meaning first, then correct only 1-2 important mistakes and give a natural alternative. Silently remember remaining issues for the final review.\n5. If I say “Let me finish” or “Wait until I say Done,” wait until I say “Done.”\n6. If I use Chinese, give one natural English version, explain briefly in Chinese only if needed, ask me to repeat it once, then continue the same thought.\n7. Give pronunciation, stress, rhythm, intonation, and pace feedback only when you can reliably hear them.\n8. Keep the discussion relaxed while naturally extending it toward IELTS Speaking Part 3.\n9. When I say “Let’s call it a day,” “今天练习结束,” or “生成课后总结,” stop asking questions and produce a Chinese after-class review using exactly these sections: 一、今日话题；二、亮点表达；三、重点优化（原表达/更自然的表达/原因）；四、今日词汇与短语；五、流畅度建议；六、雅思口语维度反馈（流利度与连贯性、词汇资源、语法范围与准确性、发音）；七、今日跟读版本。 Do not invent information.\n\nAfter producing the review, remind me to paste it into My English Studio so it can be saved to Obsidian. Do not explain these instructions. Begin now.`;
 }
 function renderSpeaking(article) {
   activeSpeakingArticle = article;

@@ -336,7 +336,15 @@ button { font: inherit; cursor: pointer; }
 }
 .feed-card::before { content: ""; width: 100%; height: 180px; border-radius: 18px; background: #e4ebef; }
 .feed-card h4 { margin: 10px 0 8px; font-size: 18px; }
-.feed-card p { margin: 0; color: var(--muted); line-height: 1.6; }
+.article-summary { display: grid; gap: 8px; }
+.article-summary p { margin: 0; }
+.summary-en { color: var(--text); font-family: Georgia, 'Times New Roman', serif; line-height: 1.65; }
+.summary-zh { color: var(--muted); font-size: 13px; line-height: 1.65; }
+.summary-angle { display: flex; align-items: baseline; gap: 8px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.summary-angle strong { flex: none; color: var(--green); font-size: 10px; letter-spacing: 0; }
+.feed-card .summary-en { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+.feed-card .summary-zh { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+#detailSummary .summary-en { font-size: 17px; }
 .feed-card .stack { display: grid; align-content: start; }
 .feed-card .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 
