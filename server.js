@@ -59,7 +59,7 @@ function parseMarkdown(filePath) {
     .filter((item) => item.term && !/^[-]+$/.test(item.term) && item.term.toLowerCase() !== 'english');
   const vocab = vocabEntries.map((item) => item.term);
   const summary = isStudyNote
-    ? plain(section(body, 'One-Minute Summary')).split(/\n+/).filter(Boolean).slice(0, 2).join(' ')
+    ? plain(section(body, 'One-Minute Summary'))
     : plain(body.split(/\n\s*\n/).find((block) => block.trim() && !block.trim().startsWith('---')) || body).slice(0, 240);
   const bilingual = isStudyNote ? section(body, '全文级中英对照精读') : '';
   const reading = isStudyNote ? readingSections(bilingual) : [];
