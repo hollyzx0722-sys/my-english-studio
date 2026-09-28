@@ -425,6 +425,15 @@ button { font: inherit; cursor: pointer; }
   flex-wrap: wrap;
   gap: 10px;
 }
+.detail-vocab-item { display: grid; gap: 4px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.detail-vocab-item strong { font-size: 14px; }
+.detail-vocab-item span { color: var(--muted); font-size: 12px; }
+.modal[data-mode="extensive"] .reading-detail { background: #eef5ef; }
+.modal[data-mode="extensive"] .segment-number { color: var(--green); }
+.modal[data-mode="extensive"] .reading-segment { border-left: 3px solid var(--green); }
+.modal[data-mode="inbox"] [data-detail-module],
+.modal[data-mode="inbox"] [data-detail-action="speaking"] { display: none; }
+.modal[data-mode="inbox"] .reading-detail { background: #f3f1ed; }
 .sentence-list { display: grid; gap: 12px; }
 .sentence-list p {
   margin: 0;

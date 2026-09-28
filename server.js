@@ -29,6 +29,12 @@ function listField(frontmatter, key) {
   const match = frontmatter.match(new RegExp(`^${key}:\\s*\\n((?:\\s+-\\s*.+\\n?)+)`, 'mi'));
   return match ? [...match[1].matchAll(/^\s+-\s*(.+)$/gmi)].map((item) => unquote(item[1])) : [];
 }
+function studyMode(frontmatter, priority, status) {
+  if (status === 'inbox') return 'inbox';
+  const explicit = (field(frontmatter, 'study_mode') || field(frontmatter, 'studyMode')).toLowerCase();
+  if (['deep', 'extensive'].includes(explicit)) return explicit;
+  return String(priority).trim().startsWith('A') ? 'deep' : 'extensive';
+}
 function readingSections(content) {
   const matches = [...content.matchAll(/^###\s+(.+)$/gm)];
   return matches.map((match, index) => {
@@ -63,12 +69,14 @@ function parseMarkdown(filePath) {
   const relative = path.relative(VAULT, filePath);
   const id = crypto.createHash('sha1').update(relative).digest('hex').slice(0, 12);
   const isArticle = isStudyNote || relative.split(path.sep)[0].toLowerCase() === 'clippings' || listField(frontmatter, 'tags').includes('clippings');
+  const priority = field(frontmatter, 'priority') || 'Inbox';
+  const status = isStudyNote ? 'complete' : 'inbox';
   return {
     id,
     title, source: isStudyNote ? field(frontmatter, 'source') : new URL(url || 'https://example.com').hostname.replace(/^www\./, ''),
-    priority: field(frontmatter, 'priority') || 'Inbox',
+    priority, studyMode: studyMode(frontmatter, priority, status),
     tag: listField(frontmatter, 'topic')[0] || 'New clipping',
-    image: './assets/cloud-ai.png', url, status: isStudyNote ? 'complete' : 'inbox',
+    image: './assets/cloud-ai.png', url, status,
     summary: summary || '从 Obsidian 同步的学习材料。', bilingual: bilingual || `原始剪藏已同步。\n\n文件：${relative}`, readingSections: reading,
     vocab, vocabEntries, sentences, prompts: prompts.length ? prompts : ['Summarize the article in your own words.', 'What is your opinion on this topic?'],
     sourcePath: relative, updatedAt: fs.statSync(filePath).mtime.toISOString(), kind: isStudyNote ? 'study-note' : 'clipping', isArticle

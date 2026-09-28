@@ -5,6 +5,7 @@
       "title": "Decision Making and Happiness",
       "source": "IELTS Fever",
       "priority": "A 精读",
+      "studyMode": "deep",
       "tag": "Choice psychology and well-being",
       "image": "./assets/cloud-ai.png",
       "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-3",
@@ -150,6 +151,7 @@
       "title": "Stealth Forces in Weight Loss",
       "source": "IELTS Fever",
       "priority": "A 精读",
+      "studyMode": "deep",
       "tag": "Biology and weight management",
       "image": "./assets/cloud-ai.png",
       "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-2",
@@ -283,6 +285,7 @@
       "title": "SOSUS Listening to the Ocean",
       "source": "IELTS Fever",
       "priority": "A 精读",
+      "studyMode": "deep",
       "tag": "Ocean acoustics and scientific discovery",
       "image": "./assets/cloud-ai.png",
       "url": "https://ieltsfever.org/academic-ielts-reading-test-107-with-answers/#passage-1",
@@ -416,6 +419,7 @@
       "title": "TechRadar - Cloud Spending Soars As Hyperscalers Up AI Investment",
       "source": "TechRadar",
       "priority": "A 精读",
+      "studyMode": "deep",
       "tag": "AI infrastructure spending",
       "image": "./assets/cloud-ai.png",
       "url": "https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026",
@@ -518,6 +522,7 @@
       "title": "Investopedia - Alibaba Slashes Prices For Cloud Products",
       "source": "Investopedia",
       "priority": "B 泛读+摘表达",
+      "studyMode": "extensive",
       "tag": "cloud pricing strategy",
       "image": "./assets/cloud-ai.png",
       "url": "https://www.investopedia.com/alibaba-slashes-prices-for-cloud-products-to-international-customers-in-ai-push-8628371",
@@ -552,20 +557,6 @@
           "en": "By targeting international customers, Alibaba Cloud is trying to strengthen its presence beyond its domestic market and appeal to businesses that need affordable cloud infrastructure.",
           "zh": "这一段的核心是 overseas expansion。对 IELTS 来说，可以连接“企业全球化”“数字基础设施普及”“发展中国家/中小企业获得技术资源”等论点。",
           "expression": "By lowering the cost of cloud services, technology firms may help smaller businesses access tools that were previously too expensive."
-        },
-        {
-          "number": "05",
-          "title": "5. Business Trade-Off",
-          "en": "Price cuts may attract new customers and support AI adoption, but they can also reduce margins and force competitors to respond with their own discounts.",
-          "zh": "这就是商业新闻里最常见的利弊结构：降价能拉新，但会压缩利润，也可能引发价格战。写作时可以用 may..., but... 来保持论证平衡。",
-          "expression": "attract new customers, support AI adoption, reduce margins, force competitors to respond"
-        },
-        {
-          "number": "06",
-          "title": "6. Reading Takeaway",
-          "en": "The article shows that the AI race is not only about advanced models. It also depends on cloud pricing, international access, and whether companies can make computing resources affordable at scale.",
-          "zh": "最值得带走的观点：AI 普及不只是技术问题，也是价格和可及性问题。云服务降价可能降低 AI 创业和企业数字化门槛。",
-          "expression": ""
         }
       ],
       "vocab": [
@@ -604,8 +595,7 @@
       ],
       "sentences": [
         "By cutting prices for international customers, Alibaba Cloud may make its services more attractive to AI developers while putting pressure on competitors to respond.",
-        "Main clause: Alibaba Cloud may make its services more attractive",
-        "Modifier: By cutting prices for international customers"
+        "Main clause: Alibaba Cloud may make its services more attractive"
       ],
       "prompts": [
         "Why might a company cut prices in an overseas market?",
@@ -616,5 +606,5 @@
       "speakingSessions": []
     }
   ],
-  "exportedAt": "2026-09-28T06:18:41.197Z"
+  "exportedAt": "2026-09-28T07:41:23.677Z"
 }

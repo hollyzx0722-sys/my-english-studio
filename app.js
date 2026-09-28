@@ -1,6 +1,6 @@
 const seedArticles = [
-  { id: 'techradar-cloud-ai', title: 'Cloud Spending Soars As Hyperscalers Up AI Investment', source: 'TechRadar', priority: 'A 精读', tag: 'AI infrastructure spending', image: './assets/cloud-ai.png', url: 'https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026', summary: 'Cloud spending is rising rapidly as hyperscalers pour money into AI infrastructure, creating a strong IELTS reading and speaking thread.', bilingual: 'Cloud spending is rising rapidly as the largest providers increase investment in AI infrastructure.\n\n中文理解：云支出上涨和 AI 基建投资被直接绑定，这篇适合练趋势、预测、比较和因果链表达。', vocab: ['cloud spending', 'hyperscalers', 'ramp up investment', 'landmark high'], sentences: ['As demand for AI services grows, cloud providers are likely to ramp up investment in infrastructure.', 'The deeper point is that AI competition is also infrastructure competition.'], prompts: ['Why do cloud providers need to spend more when AI demand rises?', 'Is infrastructure more important than algorithms in the AI race?'] },
-  { id: 'investopedia-alibaba-cloud', title: 'Alibaba Slashes Prices For Cloud Products', source: 'Investopedia', priority: 'B 泛读+摘表达', tag: 'Cloud pricing strategy', image: './assets/cloud-ai.png', url: 'https://www.investopedia.com/alibaba-slashes-prices-for-cloud-products-to-international-customers-in-ai-push-8628371', summary: 'Alibaba Cloud cut international prices as part of its AI push, which makes this a useful business and globalization case.', bilingual: 'Alibaba Cloud cut prices for international customers as part of a broader AI strategy.\n\n中文理解：这是价格战、国际化和 AI 资源可及性的结合点。', vocab: ['slash prices', 'price cuts', 'international customers', 'in an AI push'], sentences: ['By cutting prices for international customers, Alibaba Cloud may make its services more attractive to AI developers.', 'Price cuts may attract customers, but they can also reduce margins.'], prompts: ['When do price cuts help a company expand?', 'Can cheaper cloud services accelerate AI adoption?'] }
+  { id: 'techradar-cloud-ai', title: 'Cloud Spending Soars As Hyperscalers Up AI Investment', source: 'TechRadar', priority: 'A 精读', studyMode: 'deep', tag: 'AI infrastructure spending', image: './assets/cloud-ai.png', url: 'https://www.techradar.com/pro/cloud-spending-soars-as-hyperscalers-up-ai-investment-and-could-reach-a-landmark-high-in-2026', summary: 'Cloud spending is rising rapidly as hyperscalers pour money into AI infrastructure, creating a strong IELTS reading and speaking thread.', bilingual: 'Cloud spending is rising rapidly as the largest providers increase investment in AI infrastructure.\n\n中文理解：云支出上涨和 AI 基建投资被直接绑定，这篇适合练趋势、预测、比较和因果链表达。', vocab: ['cloud spending', 'hyperscalers', 'ramp up investment', 'landmark high'], sentences: ['As demand for AI services grows, cloud providers are likely to ramp up investment in infrastructure.', 'The deeper point is that AI competition is also infrastructure competition.'], prompts: ['Why do cloud providers need to spend more when AI demand rises?', 'Is infrastructure more important than algorithms in the AI race?'] },
+  { id: 'investopedia-alibaba-cloud', title: 'Alibaba Slashes Prices For Cloud Products', source: 'Investopedia', priority: 'B 泛读+摘表达', studyMode: 'extensive', tag: 'Cloud pricing strategy', image: './assets/cloud-ai.png', url: 'https://www.investopedia.com/alibaba-slashes-prices-for-cloud-products-to-international-customers-in-ai-push-8628371', summary: 'Alibaba Cloud cut international prices as part of its AI push, which makes this a useful business and globalization case.', bilingual: 'Alibaba Cloud cut prices for international customers as part of a broader AI strategy.\n\n中文理解：这是价格战、国际化和 AI 资源可及性的结合点。', vocab: ['slash prices', 'price cuts', 'international customers', 'in an AI push'], sentences: ['By cutting prices for international customers, Alibaba Cloud may make its services more attractive to AI developers.', 'Price cuts may attract customers, but they can also reduce margins.'], prompts: ['When do price cuts help a company expand?', 'Can cheaper cloud services accelerate AI adoption?'] }
 ];
 
 const stored = JSON.parse(localStorage.getItem('my-english-articles') || 'null');
@@ -28,6 +28,10 @@ const detailSections = document.querySelector('#detailSections');
 const detailVocab = document.querySelector('#detailVocab');
 const detailSentences = document.querySelector('#detailSentences');
 const detailPrompts = document.querySelector('#detailPrompts');
+const detailModeLabel = document.querySelector('#detailModeLabel');
+const detailReadingTitle = document.querySelector('#detailReadingTitle');
+const detailVocabTitle = document.querySelector('#detailVocabTitle');
+const detailSentencesTitle = document.querySelector('#detailSentencesTitle');
 const syncState = document.querySelector('#syncState');
 const syncDetail = document.querySelector('#syncDetail');
 const speakingArticle = document.querySelector('#speakingArticle');
@@ -38,6 +42,12 @@ const saveSpeakingReview = document.querySelector('#saveSpeakingReview');
 
 function statusLabel(status) { return { inbox: 'Inbox', reading: '精读中', complete: '已完成' }[status] || 'Inbox'; }
 function escapeHtml(value = '') { return String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[character])); }
+function articleStudyMode(article) {
+  if (article.status === 'inbox' || article.kind === 'clipping') return 'inbox';
+  if (['deep', 'extensive'].includes(article.studyMode)) return article.studyMode;
+  return String(article.priority || '').trim().startsWith('A') ? 'deep' : 'extensive';
+}
+function studyModeLabel(mode) { return { deep: 'A · 深度精读', extensive: 'B · 泛读摘表达', inbox: 'Inbox · 待处理' }[mode]; }
 function setActiveNav(section) { document.querySelectorAll('[data-nav]').forEach((item) => item.classList.toggle('active', item.dataset.nav === section)); }
 
 function renderFeed(filter = 'All') {
@@ -59,21 +69,38 @@ function renderFeed(filter = 'All') {
   feed.innerHTML = visible.length ? visible.map((item) => `
     <article class="feed-card" data-id="${item.id}">
       <img src="${item.image}" alt="${item.title}">
-      <div class="stack"><div class="meta"><span class="pill ${item.priority.startsWith('A') ? 'gold' : 'green'}">${item.priority}</span><span class="pill">${item.source}</span></div>
+      <div class="stack"><div class="meta"><span class="pill ${articleStudyMode(item) === 'deep' ? 'gold' : 'green'}">${studyModeLabel(articleStudyMode(item))}</span><span class="pill">${escapeHtml(item.source)}</span></div>
       <h4>${item.title}</h4><p>${item.summary}</p><div class="row"><span class="pill">${item.tag}</span><span class="pill status-pill">${statusLabel(item.status)}</span></div></div>
     </article>`).join('') : '<div class="empty-state">这个栏目还没有材料。</div>';
 }
 
 function openDetail(article) {
   activeArticle = article;
+  const mode = articleStudyMode(article);
+  const profiles = {
+    deep: { label: 'Deep reading dossier', reading: '全文脉络 · English / 中文', vocab: '核心词汇与可复用表达', sentences: '长难句拆解' },
+    extensive: { label: 'Extensive reading brief', reading: '核心信息 · 快速双语理解', vocab: '值得摘录的表达', sentences: '关键句' },
+    inbox: { label: 'Source preview', reading: '原文预览 · 等待生成学习笔记', vocab: '', sentences: '' }
+  };
+  const profile = profiles[mode];
+  modal.dataset.mode = mode;
+  detailModeLabel.textContent = profile.label;
+  detailReadingTitle.textContent = profile.reading;
+  detailVocabTitle.textContent = profile.vocab;
+  detailSentencesTitle.textContent = profile.sentences;
   detailTitle.textContent = article.title; detailSummary.textContent = article.summary;
   detailImage.src = article.image; detailImage.alt = article.title;
-  detailMeta.innerHTML = `<span class="pill ${article.priority.startsWith('A') ? 'gold' : 'green'}">${article.priority}</span><span class="pill">${article.source}</span><span class="pill">${statusLabel(article.status)}</span>`;
+  detailMeta.innerHTML = `<span class="pill ${mode === 'deep' ? 'gold' : 'green'}">${studyModeLabel(mode)}</span><span class="pill">${escapeHtml(article.source)}</span><span class="pill">${statusLabel(article.status)}</span>`;
   const sections = article.readingSections?.length ? article.readingSections : [{ number: '01', title: 'Reading takeaway', en: article.bilingual || article.summary, zh: '这篇材料已经同步，结构化精读内容将在笔记生成后显示。', expression: '' }];
-  detailSections.innerHTML = sections.map((section) => `<article class="reading-segment"><div class="segment-top"><span class="segment-number">${escapeHtml(section.number)}</span><h5>${escapeHtml(section.title)}</h5></div><div class="reading-compare"><div><span class="language-label">ENGLISH</span><p>${escapeHtml(section.en).replace(/\n/g, '<br>')}</p></div><div><span class="language-label">中文</span><p>${escapeHtml(section.zh).replace(/\n/g, '<br>')}</p></div></div>${section.expression ? `<div class="expression"><span>Useful language</span><strong>${escapeHtml(section.expression)}</strong></div>` : ''}</article>`).join('');
-  detailVocab.innerHTML = article.vocab.length ? article.vocab.map((v) => `<span class="pill">${v}</span>`).join('') : '<span class="muted">精读后会在这里出现词汇。</span>';
-  detailSentences.innerHTML = article.sentences.length ? article.sentences.map((s) => `<p>${s}</p>`).join('') : '<p>精读后会在这里出现长难句。</p>';
-  detailPrompts.innerHTML = article.prompts.map((s) => `<p>${s}</p>`).join('');
+  const displaySections = mode === 'extensive' ? sections.slice(0, 3) : sections;
+  const vocabEntries = article.vocabEntries?.length ? article.vocabEntries : (article.vocab || []).map((term) => ({ term, meaning: '' }));
+  const displayVocab = mode === 'extensive' ? vocabEntries.slice(0, 8) : vocabEntries;
+  const displaySentences = mode === 'extensive' ? (article.sentences || []).slice(0, 2) : (article.sentences || []);
+  const displayPrompts = mode === 'extensive' ? (article.prompts || []).slice(0, 3) : (article.prompts || []);
+  detailSections.innerHTML = displaySections.map((section) => `<article class="reading-segment"><div class="segment-top"><span class="segment-number">${escapeHtml(section.number)}</span><h5>${escapeHtml(section.title)}</h5></div><div class="reading-compare"><div><span class="language-label">ENGLISH</span><p>${escapeHtml(section.en).replace(/\n/g, '<br>')}</p></div><div><span class="language-label">中文</span><p>${escapeHtml(section.zh).replace(/\n/g, '<br>')}</p></div></div>${section.expression ? `<div class="expression"><span>Useful language</span><strong>${escapeHtml(section.expression)}</strong></div>` : ''}</article>`).join('');
+  detailVocab.innerHTML = displayVocab.length ? displayVocab.map((entry) => `<article class="detail-vocab-item"><strong>${escapeHtml(entry.term)}</strong>${entry.meaning ? `<span>${escapeHtml(entry.meaning)}</span>` : ''}</article>`).join('') : '<span class="muted">生成学习笔记后会在这里出现词汇。</span>';
+  detailSentences.innerHTML = displaySentences.length ? displaySentences.map((sentence) => `<p>${escapeHtml(sentence)}</p>`).join('') : '<p>当前没有需要拆解的关键句。</p>';
+  detailPrompts.innerHTML = displayPrompts.map((prompt) => `<p>${escapeHtml(prompt)}</p>`).join('');
   modal.classList.remove('hidden'); modal.setAttribute('aria-hidden', 'false');
 }
 const vocabularyMeta = {
@@ -89,15 +116,18 @@ const vocabularyMeta = {
 };
 function vocabularyItems() {
   const items = new Map();
-  articles.forEach((article) => (article.vocab || []).forEach((rawTerm) => {
-    const term = rawTerm.replace(/[`*]/g, '').trim(); const key = term.toLowerCase();
-    if (!term || key === 'english') return;
-    const meta = vocabularyMeta[key] || { meaning: '结合原文理解并在口语中复用。', uses: ['speaking', 'writing'], levels: ['雅思高频'] };
-    const current = items.get(key) || { term, meaning: meta.meaning, uses: meta.uses, levels: meta.levels, sources: [], practiceCount: 0 };
-    if (!current.sources.includes(article.source)) current.sources.push(article.source);
-    current.practiceCount += article.speakingSessions?.length || 0;
-    items.set(key, current);
-  }));
+  articles.forEach((article) => {
+    const entries = article.vocabEntries?.length ? article.vocabEntries : (article.vocab || []).map((term) => ({ term, meaning: '' }));
+    entries.forEach((entry) => {
+      const term = String(entry.term || '').replace(/[`*]/g, '').trim(); const key = term.toLowerCase();
+      if (!term || key === 'english') return;
+      const meta = vocabularyMeta[key] || { meaning: entry.meaning || '中文释义待补充', uses: ['speaking', 'writing'], levels: ['雅思高频'] };
+      const current = items.get(key) || { term, meaning: meta.meaning, uses: meta.uses, levels: meta.levels, sources: [], practiceCount: 0 };
+      if (!current.sources.includes(article.source)) current.sources.push(article.source);
+      current.practiceCount += article.speakingSessions?.length || 0;
+      items.set(key, current);
+    });
+  });
   return [...items.values()].sort((a, b) => b.practiceCount - a.practiceCount || a.term.localeCompare(b.term));
 }
 function renderVocabulary(filter = 'all') {
@@ -198,7 +228,7 @@ document.querySelectorAll('[data-scroll]').forEach((button) => button.addEventLi
 
 document.querySelector('#importForm').addEventListener('submit', (event) => {
   event.preventDefault(); const data = new FormData(event.currentTarget);
-  articles.unshift({ id: `local-${Date.now()}`, title: data.get('title').trim(), source: data.get('source').trim() || 'Clipping', priority: data.get('priority'), tag: 'New clipping', image: './assets/cloud-ai.png', url: data.get('url').trim(), status: 'inbox', summary: '刚从 Obsidian Clippings 导入，准备生成精读笔记。', bilingual: 'Import complete.\n\n中文理解：这篇材料已经进入 Inbox，下一步可以开始精读。', vocab: [], sentences: [], prompts: ['Summarize the article in your own words.', 'What is your opinion on this topic?'] });
+  articles.unshift({ id: `local-${Date.now()}`, title: data.get('title').trim(), source: data.get('source').trim() || 'Clipping', priority: data.get('priority'), studyMode: 'inbox', tag: 'New clipping', image: './assets/cloud-ai.png', url: data.get('url').trim(), status: 'inbox', summary: '刚从 Obsidian Clippings 导入，准备生成学习笔记。', bilingual: 'Import complete.\n\n中文理解：这篇材料已经进入 Inbox，下一步可以决定做精读还是泛读。', vocab: [], vocabEntries: [], sentences: [], prompts: ['Summarize the article in your own words.', 'What is your opinion on this topic?'] });
   save(); renderFeed(); renderVocabulary(); event.currentTarget.reset(); closeModal(importModal); document.querySelector('#inbox').scrollIntoView({ behavior: 'smooth' });
 });
 
